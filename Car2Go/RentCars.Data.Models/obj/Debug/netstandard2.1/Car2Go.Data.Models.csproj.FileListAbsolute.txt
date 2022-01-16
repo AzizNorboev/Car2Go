@@ -1,0 +1,15 @@
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Data.Models.deps.json
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Data.Models.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Data.Models.pdb
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Common.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Data.Common.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Common.pdb
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\bin\Debug\netstandard2.1\Car2Go.Data.Common.pdb
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.csproj.AssemblyReference.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.AssemblyInfoInputs.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.AssemblyInfo.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.csproj.CopyComplete
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\RentCars.Data.Models\obj\Debug\netstandard2.1\Car2Go.Data.Models.pdb

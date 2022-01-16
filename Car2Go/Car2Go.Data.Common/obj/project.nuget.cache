@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EoES0FawEkY7y9fHKkF0W7WQEITsP/XkyNWmFTHLxlE2y+lOFCdDp/mt1MwjuFn/ERTAaRxsOeDb3x7BQxnsOw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Data.Common\\Car2Go.Data.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
