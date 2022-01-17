@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AfVCGbXio83CNonxLzhU5gALUAARzl8unUaIYmvnChdUDg7qG50dFCxi6DnSs6DH31Nvd87SfEAcvk4Ouq/Eqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.Mapping\\Car2Go.Services.Mapping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -357,6 +357,16 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "Car2Go.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Car2Go.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Car2Go.Common.dll": {}
+        }
+      },
       "Car2Go.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -1049,6 +1059,11 @@
         "version.txt"
       ]
     },
+    "Car2Go.Common/1.0.0": {
+      "type": "project",
+      "path": "../Car2Go.Common/Car2Go.Common.csproj",
+      "msbuildProject": "../Car2Go.Common/Car2Go.Common.csproj"
+    },
     "Car2Go.Data.Common/1.0.0": {
       "type": "project",
       "path": "../Car2Go.Data.Common/Car2Go.Data.Common.csproj",
@@ -1057,6 +1072,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "Car2Go.Common >= 1.0.0",
       "Car2Go.Data.Common >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.9"
     ]
@@ -1093,6 +1109,9 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Common\\Car2Go.Common.csproj": {
+              "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Common\\Car2Go.Common.csproj"
+            },
             "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Data.Common\\Car2Go.Data.Common.csproj": {
               "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Data.Common\\Car2Go.Data.Common.csproj"
             }

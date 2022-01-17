@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Car2Go.Common\Car2Go.Common.csproj" />
     <ProjectReference Include="..\Car2Go.Data.Common\Car2Go.Data.Common.csproj" />
   </ItemGroup>
 

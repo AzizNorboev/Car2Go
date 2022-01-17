@@ -10,7 +10,6 @@ namespace Car2Go.Data.Models
     {
         public Car()
         {
-            this.Reviews = new HashSet<Review>();
             this.RentDays = new HashSet<CarRentDays>();
             this.InUse = true;
             this.CreatedOn = DateTime.UtcNow;
@@ -23,7 +22,7 @@ namespace Car2Go.Data.Models
         public string Model { get; set; }
 
         [Required]
-        [MinLength(150)]
+        [MinLength(15)]
         public string Description { get; set; }
 
         [Required]
@@ -45,8 +44,6 @@ namespace Car2Go.Data.Models
         public int LocationId { get; set; }
 
         public virtual Location Location { get; set; }
-
-        public virtual ICollection<Review> Reviews { get; set; }
 
         public virtual ICollection<CarRentDays> RentDays { get; set; }
     }

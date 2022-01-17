@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "60c06228-b0b4-4849-a9d1-110f4445072b": {
+      "ProjectGuid": "60c06228-b0b4-4849-a9d1-110f4445072b",
+      "DisplayName": "Car2Go.Common",
+      "ColorIndex": 0
+    },
+    "58ed893d-e9b4-4cbf-8e30-573018f0ab59": {
+      "ProjectGuid": "58ed893d-e9b4-4cbf-8e30-573018f0ab59",
+      "DisplayName": "Car2Go.Data.Common",
+      "ColorIndex": 1
+    },
+    "16fd3e85-6995-4a76-9188-aa7270bbc707": {
+      "ProjectGuid": "16fd3e85-6995-4a76-9188-aa7270bbc707",
+      "DisplayName": "Car2Go.Data.Models",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c15fc138-b98f-4bf1-a00d-4c3fe06ce133": {
+      "ProjectGuid": "c15fc138-b98f-4bf1-a00d-4c3fe06ce133",
+      "DisplayName": "Car2Go.Data.Models",
+      "ColorIndex": 3
+    },
+    "04b7ef6a-f32e-4e30-99d6-b207dcb8e7a6": {
+      "ProjectGuid": "04b7ef6a-f32e-4e30-99d6-b207dcb8e7a6",
+      "DisplayName": "Car2Go.Data",
+      "ColorIndex": 4
+    },
+    "5bf386eb-206c-4742-9476-11675cc6a2f3": {
+      "ProjectGuid": "5bf386eb-206c-4742-9476-11675cc6a2f3",
+      "DisplayName": "Car2Go.Services.Data",
+      "ColorIndex": 5
+    },
+    "c84bf3c1-5319-4e44-b37e-420aafd9a2ed": {
+      "ProjectGuid": "c84bf3c1-5319-4e44-b37e-420aafd9a2ed",
+      "DisplayName": "Car2Go.Services.Mapping",
+      "ColorIndex": 6
+    },
+    "276ab3bb-031d-4690-b981-21cf68be6528": {
+      "ProjectGuid": "276ab3bb-031d-4690-b981-21cf68be6528",
+      "DisplayName": "Car2Go.Web.ViewModels",
+      "ColorIndex": 7
+    }
+  },
+  "NextColorIndex": 8
+}
