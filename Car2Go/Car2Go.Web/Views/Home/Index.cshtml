@@ -1,8 +1,141 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@*@model Car2Go.Web.ViewModels.Cars.CarsLstinViewtModel*@
+@{ ViewData["Title"] = "Home Page"; }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car2Go - Car Rental Service HTML Template</title>
+    <!-- site favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.jpg" />
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- lightcase css link -->
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <!-- animate css link -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- nice select css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- datepicker css link -->
+    <link rel="stylesheet" href="assets/css/datepicker.min.css">
+    <!-- wickedpicker css link -->
+    <link rel="stylesheet" href="assets/css/wickedpicker.min.css">
+    <!-- jquery ui css link -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <!-- owl carousel css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <div id="preloader"></div>
+    <section class="banner-section banner-section--style2 bg_img" data-background="/assets/images/Captiva.jpg">
+        <partial name="_SearchCarsPartial" model="@Model" />
+    </section>
+
+    <section class="about-section pt-120 pb-120">
+        <div class="element text-center"><img src="/assets/images/elements/malibu.png" alt="image"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="block-area">
+                        <div class="block-header">
+                            <h2 class="title">We are Best Company to Find and rent a Car</h2>
+                            <p> Car2Go is the leading national car rental company in Uzbekistan. We operate with the fleet in the country, which currently consists of over cars, 90% of which are brand new or up to 3 years old. We offer national coverage of the service through a chain of over service offices in the country .</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="counter-section bg_img overlay-main" data-background="assets/images/kia.jpg">
+        <div class="container">
+            <div class="row mb-none-30">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-item counter-item--style2">
+                        <div class="icon">
+                            <i class="fa fa-car"></i>
+                        </div>
+                        <div class="content">
+                            <span class="counter">0</span>
+                            <span class="title">total car</span>
+                        </div>
+                    </div>
+                </div><!-- counter-item end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-item counter-item--style2">
+                        <div class="icon">
+                            <i class="fa fa-smile-o"></i>
+                        </div>
+                        <div class="content">
+                            <span class="counter">0</span>
+                            <span class="title">happy customer</span>
+                        </div>
+                    </div>
+                </div><!-- counter-item end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-item counter-item--style2">
+                        <div class="icon">
+                            <i class="fa fa-truck"></i>
+                        </div>
+                        <div class="content">
+                            <span class="counter">0</span>
+                            <span class="title">travel time</span>
+                        </div>
+                    </div>
+                </div><!-- counter-item end -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-item counter-item--style2">
+                        <div class="icon">
+                            <i class="fa fa-puzzle-piece"></i>
+                        </div>
+                        <div class="content">
+                            <span class="counter">0</span>
+                            <span class="title">solution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-to-top">
+        <span class="scroll-icon">
+            <i class="fa fa-rocket"></i>
+        </span>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+    <script src="assets/js/jquery-migrate-3.0.0.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/lightcase.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <script src="assets/js/datepicker.min.js"></script>
+    <script src="assets/js/datepicker.en.js"></script>
+
+    <script src="assets/js/wickedpicker.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

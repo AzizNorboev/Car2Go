@@ -1,16 +1,11 @@
 ﻿using System.Collections.Generic;
 using Car2Go.Data.Models;
 using Car2Go.Data.Models.Enums;
-using Car2Go.Web.ViewModels.Reviews;
 
 namespace Car2Go.Web.ViewModels.Cars
 {
     public class CarDetailInputModel
     {
-        public CarDetailInputModel()
-        {
-            this.Reviews = new HashSet<ReviewInputModel>();
-        }
 
         public int Id { get; set; }
 

@@ -1,37 +1,40 @@
-﻿using Car2Go.Web.Models;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+using Car2Go.Services.Data;
+using Car2Go.Web.ViewModels;
+using Car2Go.Web.ViewModels.Home;
 
 namespace Car2Go.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILocationsService locationsService;
+        private readonly IOrdersService ordersService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILocationsService locationsService, IOrdersService ordersService)
         {
-            _logger = logger;
+            this.locationsService = locationsService;
+            this.ordersService = ordersService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var locationsList = this.locationsService.GetAllLocationNames();
+
+            this.ViewData["FinishedOrders"] = this.ordersService.UserFinishedOrders(this.User.Identity.Name);
+            return this.View(new SearchCarsViewModel { Locations = locationsList });
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return this.View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return this.View(
+                new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
         }
     }
 }

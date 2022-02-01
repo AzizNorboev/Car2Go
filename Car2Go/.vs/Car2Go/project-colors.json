@@ -45,7 +45,12 @@
       "ProjectGuid": "276ab3bb-031d-4690-b981-21cf68be6528",
       "DisplayName": "Car2Go.Web.ViewModels",
       "ColorIndex": 7
+    },
+    "155d7e0d-2025-4063-90c6-0268d9465f49": {
+      "ProjectGuid": "155d7e0d-2025-4063-90c6-0268d9465f49",
+      "DisplayName": "Car2Go.Web",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }

@@ -1,7 +1,6 @@
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\bin\Debug\netstandard2.1\Car2Go.Common.deps.json
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\bin\Debug\netstandard2.1\Car2Go.Common.dll
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\bin\Debug\netstandard2.1\Car2Go.Common.pdb
-C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.csproj.AssemblyReference.cache
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.AssemblyInfoInputs.cache
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.AssemblyInfo.cs

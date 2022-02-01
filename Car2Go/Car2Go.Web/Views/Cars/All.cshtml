@@ -1,0 +1,118 @@
+﻿@model Car2Go.Web.ViewModels.Cars.CarsLstinViewtModel
+@{ ViewData["Title"] = "All Cars"; }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- site favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/Captiva.jpg" />
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- lightcase css link -->
+    <link rel="stylesheet" href="/assets/css/lightcase.css">
+    <!-- animate css link -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <!-- nice select css link -->
+    <link rel="stylesheet" href="/assets/css/nice-select.css">
+    <!-- datepicker css link -->
+    <link rel="stylesheet" href="/assets/css/datepicker.min.css">
+    <!-- wickedpicker css link -->
+    <link rel="stylesheet" href="/assets/css/wickedpicker.min.css">
+    <!-- jquery ui css link -->
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+    <!-- owl carousel css link -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+    <!-- preloader start -->
+    <!-- preloader end -->
+    <!--  header-section start  -->
+    <!--  header-section end  -->
+    <!-- inner-apge-banner start -->
+    <section class="inner-page-banner bg_img overlay-3" data-background="/assets/images/Captiva.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="page-title">reservation</h2>
+                    <ol class="page-list">
+                        <li><a class="text-white " asp-area="" asp-controller="Home" asp-action="Index"><b>Home</b></a></li>
+                        <li>car list</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- inner-apge-banner end -->
+    <!-- car-search-section start -->
+    <section class="car-search-section pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="view-style-toggle-area">
+                        <button class="view-btn list-btn"><i class="fa fa-bars" style="font-size:40px"></i></button>
+                        <button class="view-btn grid-btn active"><i class="fa fa-th-large" style="font-size:40px"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @foreach (var car in Model.Cars)
+        {
+<div class="col-md-12">
+    <div class="car-item">
+        <div class="thumb bg_img" data-background="@car.Image"></div>
+        <div class="car-item-body">
+            <div class="content">
+                <h4 class="title">@car.Model</h4>
+                <span class="price">@car.PricePerDay</span>
+                <p>@car.Description</p>
+
+                <a href="/Cars/Details/@car.Id" class="cmn-btn">Details Page</a>
+            </div>
+            <div class="car-item-meta">
+                <ul class="details-list">
+                    <li><i class="fa fa-car"></i>@car.Year</li>
+                    <li><i class="fa fa-tachometer"></i>@car.Speed KM</li>
+                    <li><i class="fa fa-sliders"></i>@car.GearType.ToString()</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>}
+        <div>
+            <partial name="_PagingPartial" model="@Model" />
+        </div>
+    </section> <!-- car-search-section end --> <!-- footer-section start --> <!-- footer-section end --> <!-- scroll-to-top start -->
+    <div class="scroll-to-top">
+        <span class="scroll-icon">
+            <i class="fa fa-rocket"></i>
+        </span>
+    </div> <!-- scroll-to-top end --> <!-- jquery js link -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script> <!-- jquery migrate js link -->
+    <script src="/assets/js/jquery-migrate-3.0.0.js"></script> <!-- bootstrap js link -->
+    <script src="/assets/js/bootstrap.min.js"></script> <!-- lightcase js link -->
+    <script src="/assets/js/lightcase.js"></script> <!-- wow js link -->
+    <script src="/assets/js/wow.min.js"></script> <!-- nice select js link -->
+    <script src="/assets/js/jquery.nice-select.min.js"></script> <!-- datepicker js link -->
+    <script src="/assets/js/datepicker.min.js"></script>
+    <script src="/assets/js/datepicker.en.js"></script> <!-- wickedpicker js link -->
+    <script src="/assets/js/wickedpicker.min.js"></script> <!-- owl carousel js link -->
+    <script src="/assets/js/owl.carousel.min.js"></script> <!-- jquery ui js link -->
+    <script src="/assets/js/jquery-ui.min.js"></script> <!-- main js link -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+
+</html>
