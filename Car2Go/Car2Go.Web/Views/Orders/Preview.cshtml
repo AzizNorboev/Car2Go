@@ -27,7 +27,7 @@
         <hr />
         <div class="d-flex justify-content-between">
             <h4>Price per day:</h4>
-            <h4>$@Model.PricePerDay</h4>
+            <h4>@Model.PricePerDay UZS</h4>
         </div>
         @if (@Model.DiscountPercent > 0)
         {
@@ -37,12 +37,12 @@
             </div>
             <div class="d-flex justify-content-between" style="color:red">
                 <h4>Discount:</h4>
-                <h4>- $@Model.DiscountSum.ToString("F")</h4>
+                <h4>- @Model.DiscountSum.ToString("F") UZS</h4>
             </div>}
 
         <div class="d-flex justify-content-between">
             <h4>Total Price:</h4>
-            <h4>$@Model.TotalPrice.ToString("F")</h4>
+            <h4>@Model.TotalPrice.ToString("F") UZS</h4>
         </div>
         <hr />
         <div class="d-flex justify-content-between">

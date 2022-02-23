@@ -44,17 +44,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="GearType" class="control-label"></label>
-                <select asp-for="GearType" class="form-control"></select>
+                <select asp-for="GearType" class="form-control" asp-items="Html.GetEnumSelectList<Car2Go.Data.Models.Enums.GearType>()"></select>
                 <span asp-validation-for="GearType" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PricePerDay" class="control-label"></label>
                 <input asp-for="PricePerDay" class="form-control" />
                 <span asp-validation-for="PricePerDay" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LocationId" class="control-label"></label>
-                <select asp-for="LocationId" class ="form-control" asp-items="ViewBag.LocationId"></select>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">

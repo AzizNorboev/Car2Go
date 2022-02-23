@@ -70,9 +70,6 @@ namespace Car2Go.Web
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
-            // Application services
-            services.AddTransient<ISettingsService, SettingsService>();
-
             // services.AddTransient<IUserStore<ApplicationUser>, ApplicationUserStore>();
             // services.AddTransient<IRoleStore<ApplicationRole>, ApplicationRoleStore>();
             services.AddTransient<ILocationsService, LocationsService>();

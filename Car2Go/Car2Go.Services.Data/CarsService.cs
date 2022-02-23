@@ -32,8 +32,7 @@
                       Image = x.Image,
                       Year = x.Year,
                       GearType = x.GearType,
-                      Speed = x.Speed,
-                      Location = x.Location,
+                      Speed = x.Speed
                   }).ToList();
 
             return cars;
@@ -53,7 +52,6 @@
             }
 
             var cars = this.carsRepository.AllAsNoTracking().
-                 Where(l => l.Location.Name == location).
                  Where(x => x.RentDays.Any(d => dates.Contains(d.RentDate)) == false).
                  Select(x => new ListCarInputModel
                  {
@@ -63,7 +61,6 @@
                      GearType = x.GearType,
                      PricePerDay = x.PricePerDay,
                      Model = x.Model,
-                     Location = x.Location.Name,
                      Year = x.Year,
                      Days = dates.Count(),
                      StartRent = start,

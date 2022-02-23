@@ -47,7 +47,7 @@ else
                                             <td>@order.ReturnLocation</td>
                                                             <td>@order.RentStart.ToShortDateString()</td>
                                                                             <td>@order.RentEnd.ToShortDateString()</td>
-                                                                                            <td>$@order.Price</td>
+                                                                                            <td>@order.Price UZS</td>
                                                                                                             <td>
                                                                                                                 @order.Status.ToString()
                                                                                                         </td> </tr>
@@ -58,6 +58,6 @@ else
     @if (Model.Orders.Count() > 0)
     {
         var spent = this.Model.Orders.Sum(x => x.Price);
-<h3 class="text-info">Total spent: $ @spent</h3>}
+<h3 class="text-info">Total spent: @spent UZS</h3>}
 
 

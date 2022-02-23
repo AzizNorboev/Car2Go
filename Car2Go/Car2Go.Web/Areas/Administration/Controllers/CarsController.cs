@@ -36,7 +36,6 @@ namespace Car2Go.Web.Areas.Administration.Controllers
             }
 
             var car = await this.dataRepository.All()
-                .Include(c => c.Location)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (car == null)
             {
@@ -57,7 +56,7 @@ namespace Car2Go.Web.Areas.Administration.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay,LocationId,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
+        public async Task<IActionResult> Create([Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
         {
             if (this.ModelState.IsValid)
             {
@@ -65,6 +64,9 @@ namespace Car2Go.Web.Areas.Administration.Controllers
                 await this.dataRepository.SaveChangesAsync();
                 return this.RedirectToAction(nameof(this.Index));
             }
+            await this.dataRepository.AddAsync(car);
+            await this.dataRepository.SaveChangesAsync();
+            return this.RedirectToAction(nameof(this.Index));
 
             // this.ViewData["LocationId"] = this.dataRepository.All().Select(b => new SelectListItem
             // {
@@ -95,7 +97,7 @@ namespace Car2Go.Web.Areas.Administration.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay,LocationId,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
+        public async Task<IActionResult> Edit(int id, [Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
         {
             if (id != car.Id)
             {
@@ -136,7 +138,6 @@ namespace Car2Go.Web.Areas.Administration.Controllers
             }
 
             var car = await this.dataRepository.All()
-                .Include(c => c.Location)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (car == null)
             {
