@@ -5,7 +5,7 @@ using Car2Go.Data.Models.Enums;
 
 namespace Car2Go.Data.Models
 {
-    public class Order : BaseModel<string>
+    public class Order : BaseDeletableModel<string>
     {
         public Order()
         {

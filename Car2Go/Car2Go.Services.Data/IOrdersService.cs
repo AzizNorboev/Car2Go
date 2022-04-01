@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Car2Go.Data.Models;
 using Car2Go.Web.ViewModels.Orders;
 
 namespace Car2Go.Services.Data
@@ -15,5 +16,7 @@ namespace Car2Go.Services.Data
         IEnumerable<MyOrdersViewModel> All();
 
         IEnumerable<OrderDetailsInputModel> GetOrderById(string id);
+
+        Task<bool> Delete(string id);
     }
 }

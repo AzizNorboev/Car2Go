@@ -17,12 +17,14 @@
         <tr class="table-primary ">
             <th scope="col">Order Id</th>
             <th scope="col">Car Model</th>
-            <th scope="col">Pick Up Location</th>
-            <th scope="col">Return Location</th>
-            <th scope="col">Start Date</th>
-            <th scope="col">End Date</th>
+            <th scope="col">User</th>
             <th scope="col">Price</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>     
             <th scope="col">Status</th>
+            <th scope="col">Pick Up Location</th>
+            <th scope="col">Return Location</th>          
+            <th scope="col">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -40,18 +42,17 @@ else
 @Html.Raw(" <tr class=\"table-warning\">") }
             <tr>
 <th scope="row"><a href="/orders/details/@order.Id">@order.Id.ToUpper()</a></th>
-                                               <td>
-                                    @order.CarModel
-                            </td>
+                            <td>@order.Car.Model</td>
+                            <td>@order.User.Email</td>
+                            <td>@order.Price UZS</td>
+                            <td>@order.RentStart.ToShortDateString()</td>
+                            <td>@order.RentEnd.ToShortDateString()</td>
+                            <td>@order.Status.ToString()</td>
                             <td>@order.PickUpLocation</td>
-                                            <td>@order.ReturnLocation</td>
-                                                            <td>@order.RentStart.ToShortDateString()</td>
-                                                                            <td>@order.RentEnd.ToShortDateString()</td>
-                                                                                            <td>@order.Price UZS</td>
-                                                                                                            <td>
-                                                                                                                @order.Status.ToString()
-                                                                                                        </td> </tr>
-                                                                                                                                        @Html.Raw(" </tr>")}
+                            <td>@order.ReturnLocation</td>                                                 
+                            <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
+             </tr>
+                                                        @Html.Raw(" </tr>")}
         </tbody>
     </table>
 
@@ -59,5 +60,3 @@ else
     {
         var spent = this.Model.Orders.Sum(x => x.Price);
 <h3 class="text-info">Total spent: @spent UZS</h3>}
-
-

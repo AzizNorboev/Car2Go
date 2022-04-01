@@ -5,16 +5,17 @@ using System.Threading.Tasks;
 using Car2Go.Data.Common.Repositories;
 using Car2Go.Data.Models;
 using Car2Go.Web.ViewModels.Orders;
+using Microsoft.EntityFrameworkCore;
 
 namespace Car2Go.Services.Data
 {
     public class OrdersService : IOrdersService
     {
-        private readonly IRepository<Order> ordersRepository;
+        private readonly IDeletableEntityRepository<Order> ordersRepository;
         private readonly IUsersService usersService;
         private readonly ILocationsService locationsService;
 
-        public OrdersService(IRepository<Order> ordersRepository, IUsersService usersService, ILocationsService locationsService)
+        public OrdersService(IDeletableEntityRepository<Order> ordersRepository, IUsersService usersService, ILocationsService locationsService)
         {
             this.ordersRepository = ordersRepository;
             this.usersService = usersService;
@@ -37,6 +38,15 @@ namespace Car2Go.Services.Data
 
             return orders;
         }
+
+        public async Task<bool> Delete(string id)
+        {
+            var order = ordersRepository.All().FirstOrDefault(x => x.Id == id);
+            ordersRepository.Delete(order);
+            await ordersRepository.SaveChangesAsync();
+            return true;
+        }
+
 
         public IEnumerable<OrderDetailsInputModel> GetOrderById(string id)
         {

@@ -15,6 +15,7 @@ namespace Car2Go.Data.Models
             this.CreatedOn = DateTime.UtcNow;
         }
 
+        //TODO: Add color property
         public bool InUse { get; set; }
 
         [Required]

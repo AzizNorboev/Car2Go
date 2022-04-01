@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Car2Go.Data.Models;
+using System.Collections.Generic;
 
 namespace Car2Go.Web.ViewModels.Orders
 {
     public class AllOrderInputViewModel
     {
-       public IEnumerable<MyOrdersViewModel> Orders { get; set; }
+       public IEnumerable<Order> Orders { get; set; }
     }
 }

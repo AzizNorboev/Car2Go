@@ -5,21 +5,28 @@ using Microsoft.AspNetCore.Mvc;
 using Car2Go.Data.Models;
 using Car2Go.Services.Data;
 using Car2Go.Web.ViewModels.Orders;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using Car2Go.Data.Common.Repositories;
 
 namespace Car2Go.Web.Controllers
 {
     public class OrdersController : BaseController
     {
         private readonly IOrdersService ordersService;
+        private readonly IDeletableEntityRepository<Order> dataRepository;
         private readonly ICarsService carsService;
         private readonly UserManager<ApplicationUser> userManager;
 
         public OrdersController(
             ICarsService carsService,
+            IDeletableEntityRepository<Order> dataRepository,
             IOrdersService ordersService,
             UserManager<ApplicationUser> userManager)
         {
             this.carsService = carsService;
+            this.dataRepository = dataRepository;
             this.ordersService = ordersService;
             this.userManager = userManager;
         }
@@ -29,7 +36,7 @@ namespace Car2Go.Web.Controllers
         {
             var viewModel = new AllOrderInputViewModel
             {
-                Orders = this.ordersService.All(),
+                Orders = dataRepository.All().Include(c => c.Car).Include(u => u.User)
             };
 
             return this.View(viewModel);
@@ -67,6 +74,31 @@ namespace Car2Go.Web.Controllers
             };
 
             return this.View(viewModel);
+        }
+        public async Task<IActionResult> Delete(string? id)
+        {
+            if (id == null)
+            {
+                return this.NotFound();
+            }
+
+            var order = await dataRepository.All().FirstOrDefaultAsync(m => m.Id == id);
+            if (order == null)
+            {
+                return this.NotFound();
+            }
+
+            return View(order);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            await ordersService.Delete(id);
+
+            return this.RedirectToAction(nameof(this.MyOrders));
         }
     }
 }
