@@ -17,13 +17,13 @@
             this.carsRepository = carsRepository;
         }
 
-        public IEnumerable<CarDetailInputModel> GetAll(int page, int itemsPerRege = 6)
+        public IEnumerable<Car> GetAll(int page, int itemsPerRege = 6)
         {
             var cars = this.carsRepository.AllAsNoTracking()
                   .OrderBy(x => x.Id)
                   .Skip((page - 1) * itemsPerRege)
                   .Take(itemsPerRege)
-                  .Select(x => new CarDetailInputModel
+                  .Select(x => new Car
                   {
                       Id = x.Id,
                       Description = x.Description,

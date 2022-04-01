@@ -3,16 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using Car2Go.Services.Data;
 using Car2Go.Web.ViewModels.Cars;
 using Car2Go.Web.ViewModels.Home;
+using Car2Go.Data.Common.Repositories;
+using Car2Go.Data.Models;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Car2Go.Web.Controllers
 {
     public class CarsController : BaseController
     {
         private readonly ICarsService carsService;
-
-        public CarsController(ICarsService carsService)
+        private readonly IDeletableEntityRepository<Car> dataRepository;
+        public CarsController(ICarsService carsService, IDeletableEntityRepository<Car> dataRepository)
         {
             this.carsService = carsService;
+            this.dataRepository = dataRepository;
         }
 
         public IActionResult All(int id = 1)
@@ -58,15 +63,26 @@ namespace Car2Go.Web.Controllers
             return this.View(viewModel);
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> DetailsAsync(int id)
         {
-            const int ItemsPerPage = 1;
-            var viewModel = new CarsLstinViewtModel
+            //const int ItemsPerPage = 1;
+            //var viewModel = new CarsLstinViewtModel
+            //{
+            //    Cars = this.carsService.GetAll(id, ItemsPerPage),
+            //};
+            if (id == null)
             {
-                Cars = this.carsService.GetAll(id, ItemsPerPage),
-            };
+                return this.NotFound();
+            }
 
-            return this.View(viewModel);
+            var car = await this.dataRepository.All()
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (car == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.View(car);
         }
     }
 }
