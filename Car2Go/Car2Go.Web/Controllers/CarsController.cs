@@ -57,7 +57,7 @@ namespace Car2Go.Web.Controllers
                 Days = (model.Return.Date - model.Pickup.Date).TotalDays,
 
                 PickUpPlace = model.PickupPlace,
-                ReturnPlace = model.PickupPlace,
+                ReturnPlace = model.ReturnPlace,
             };
 
             return this.View(viewModel);

@@ -36,7 +36,10 @@ namespace Car2Go.Web.Controllers
         {
             var viewModel = new AllOrderInputViewModel
             {
-                Orders = dataRepository.All().Include(c => c.Car).Include(u => u.User)
+                Orders = dataRepository.All().Include(c => c.Car)
+                                             .Include(u => u.User)
+                                             .Include(l => l.PickUpLocation)
+                                             .Include(l=>l.ReturnLocation)
             };
 
             return this.View(viewModel);

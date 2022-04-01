@@ -16,9 +16,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Model)
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.Description)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Year)
             </th>
@@ -35,13 +35,13 @@
                 @Html.DisplayNameFor(model => model.PricePerDay)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CreatedOn)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ModifiedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
             </th>
             <th></th>
         </tr>
@@ -56,9 +56,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Model)
                 </td>
-                <td>
+               @* <td>
                     @Html.DisplayFor(modelItem => item.Description)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.Year)
                 </td>
@@ -66,23 +66,25 @@
                     @Html.DisplayFor(modelItem => item.Speed)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Image)
+                     <div class="col-md-8">
+                     <img class="img-fluid" src="@Html.DisplayFor(modelItem => item.Image)" alt="">
+                     </div>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.GearType)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.PricePerDay)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsDeleted)
-                    @Html.DisplayFor(modelItem => item.DeletedOn)
-                </td>
+                </td>              
                 <td>
                     @Html.DisplayFor(modelItem => item.CreatedOn)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ModifiedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
+                    @Html.DisplayFor(modelItem => item.DeletedOn)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

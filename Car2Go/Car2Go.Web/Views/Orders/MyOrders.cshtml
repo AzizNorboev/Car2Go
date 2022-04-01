@@ -48,8 +48,8 @@ else
                             <td>@order.RentStart.ToShortDateString()</td>
                             <td>@order.RentEnd.ToShortDateString()</td>
                             <td>@order.Status.ToString()</td>
-                            <td>@order.PickUpLocation</td>
-                            <td>@order.ReturnLocation</td>                                                 
+                            <td>@order.PickUpLocation.Name</td>
+                            <td>@order.ReturnLocation.Name</td>                                                 
                             <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
              </tr>
                                                         @Html.Raw(" </tr>")}
