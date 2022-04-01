@@ -1,7 +1,7 @@
 ﻿@model Car2Go.Web.ViewModels.Home.SearchCarsViewModel
 
 <div class="col-md-7 card" style="background-color: white; font-size:150%">
-    <form asp-controller="Cars" asp-action="Available" method="POST">
+    <form asp-controller="Cars" asp-action="Available" method="get">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="form-row" style="margin-top: 3%">
             <div class="col-md-6 mb-3">

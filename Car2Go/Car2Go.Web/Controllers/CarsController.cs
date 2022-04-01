@@ -47,27 +47,24 @@ namespace Car2Go.Web.Controllers
 
             return this.View(viewModel);
         }
-        [HttpPost]
-        public string All(string searchTerm, bool notUsed)
-        {
-            return "From [HttpPost]All: filter on " + searchTerm;
-        }
 
-        [HttpPost]
-        public IActionResult Available(SearchCarsViewModel model)
+       [HttpGet]
+        public IActionResult Available(SearchCarsViewModel model, string searchTerm)
         {
             if (!this.User.Identity.IsAuthenticated)
         {
                 return this.Redirect("/Identity/Account/Login");
             }
 
-            if (!this.ModelState.IsValid)
-               {
-               return this.RedirectToAction("Index", "Home");
-            }
-
+            //if (!this.ModelState.IsValid)
+            //   {
+            //   return this.RedirectToAction("Index", "Home");
+            //}
             var cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace).ToList();
-
+            if (!string.IsNullOrEmpty(searchTerm))
+            { 
+             cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace).Where(c => c.Model.Contains(searchTerm)).ToList();
+            }
             var viewModel = new AvailableCarsViewModel
             {
                 Cars = cars,

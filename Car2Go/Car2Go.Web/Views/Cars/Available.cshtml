@@ -2,10 +2,30 @@
 @{
     ViewData["Title"] = "Available cars";
 }
-
+       
 <h1 style="margin-top:2%">Available cars for the period @Model.Start.Date.ToShortDateString() - @Model.End.Date.ToShortDateString()</h1>
 
 <hr class="border-info" />
+
+    <form asp-controller="Cars" asp-action="Available" method="get" style="width:400px" >
+             <div style="width: 500px;margin-bottom:10px">
+                 <div class="t">
+        <input type="text" name="searchTerm" style="height: 35px;"/>
+         </div>
+        <input type="submit" value="Search By Car Model" style="margin-left: 10px; border-color: #abc8f5; background-color:#96d117"/>
+        </div>
+        </form>
+        <style>
+            div { display: table; }
+            div.t {
+              display: table-cell;
+              width: 100%;
+                }
+            div.t > input {
+              width: 100%;
+              border: 3px solid #abc8f5;
+                        }
+        </style>
 @if (Model.Cars.Count == 0)
 {
     <h1>Sorry, we dont have any available car in this location.</h1>

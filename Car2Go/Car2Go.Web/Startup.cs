@@ -117,6 +117,7 @@ namespace Car2Go.Web
                     endpoints.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                     endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                     endpoints.MapControllerRoute("default", "{controller=Cars}/{action=All}/{searchTerm?}");
+                    endpoints.MapControllerRoute("default", "{controller=Cars}/{action=Available}/{searchTerm?}");
                     endpoints.MapRazorPages();
                 });
         }
