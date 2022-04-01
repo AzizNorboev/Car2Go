@@ -20,18 +20,37 @@ namespace Car2Go.Web.Controllers
             this.dataRepository = dataRepository;
         }
 
-        public IActionResult All(int id = 1)
+        public IActionResult All(string searchTerm, int id = 1)
         {
             const int ItemsPerPage = 6;
-            var viewModel = new CarsLstinViewtModel
+            CarsLstinViewtModel viewModel;
+            if (!string.IsNullOrEmpty(searchTerm)) 
             {
-                ItemsPerPage = ItemsPerPage,
-                PageNumber = id,
-                CarsCount = this.carsService.GetCount(),
-                Cars = this.carsService.GetAll(id, ItemsPerPage),
-            };
+                viewModel = new CarsLstinViewtModel
+               {
+                   ItemsPerPage = ItemsPerPage,
+                   PageNumber = id,
+                   CarsCount = this.carsService.GetCount(),
+                   Cars = this.carsService.GetAll(id, ItemsPerPage).Where(a => a.Model.Contains(searchTerm))
+               };
+            }
+            else
+            {
+                viewModel = new CarsLstinViewtModel
+                {
+                    ItemsPerPage = ItemsPerPage,
+                    PageNumber = id,
+                    CarsCount = this.carsService.GetCount(),
+                    Cars = this.carsService.GetAll(id, ItemsPerPage)
+                };
+            }
 
             return this.View(viewModel);
+        }
+        [HttpPost]
+        public string All(string searchTerm, bool notUsed)
+        {
+            return "From [HttpPost]All: filter on " + searchTerm;
         }
 
         [HttpPost]
