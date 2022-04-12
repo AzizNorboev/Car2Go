@@ -1,4 +1,21 @@
 ﻿@model Car2Go.Web.ViewModels.Cars.CarsLstinViewtModel
+@using Microsoft.AspNetCore.Localization
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Builder.RequestLocalizationOptions> locOptions
+
+
+    @{
+    var culture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureList = locOptions.Value.SupportedUICultures.Select(x => new SelectListItem{Value = x.Name, Text = x.Name}).ToList();
+    var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"{Context.Request.Path.Value}{Context.Request.QueryString}";
+}
+
+<div>
+    <form asp-action="All" asp-controller = "Cars" method="get">
+        <select name = "culture" onchange="this.form.submit();" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList">
+    </select>
+    </form>
+</div>
 @{ ViewData["Title"] = "All Cars"; }
 
 <!DOCTYPE html>
@@ -39,13 +56,13 @@
     <!--  header-section start  -->
     <!--  header-section end  -->
     <!-- inner-apge-banner start -->
-    <section class="inner-page-banner bg_img overlay-3" data-background="/assets/images/Captiva.jpg">
+    <section class="inner-page-banner bg_img overlay-3" data-background="/assets/images/Captiva.jpg" style="margin-bottom: 40px">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="page-title">reservation</h2>
+                    <h2 class="page-title">@localizer["reservation"]</h2>
                     <ol class="page-list">
-                        <li><a class="text-white " asp-area="" asp-controller="Home" asp-action="Index"><b>Home</b></a></li>
+                        <li><a class="text-white " asp-area="" asp-controller="Home" asp-action="Index"><b>@localizer["Home"]</b></a></li>
                         <li>car list</li>
                     </ol>
                 </div>

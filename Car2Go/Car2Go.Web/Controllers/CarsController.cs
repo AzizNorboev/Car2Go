@@ -20,7 +20,7 @@ namespace Car2Go.Web.Controllers
             this.dataRepository = dataRepository;
         }
 
-        public IActionResult All(string searchTerm, int id = 1)
+        public IActionResult All(string searchTerm, string culture, int id = 1)
         {
             const int ItemsPerPage = 6;
             CarsLstinViewtModel viewModel;

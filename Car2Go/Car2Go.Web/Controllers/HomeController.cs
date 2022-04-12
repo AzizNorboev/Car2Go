@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Car2Go.Services.Data;
 using Car2Go.Web.ViewModels;
 using Car2Go.Web.ViewModels.Home;
+using Microsoft.AspNetCore.Mvc.Localization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace Car2Go.Web.Controllers
 {
@@ -10,31 +14,33 @@ namespace Car2Go.Web.Controllers
     {
         private readonly ILocationsService locationsService;
         private readonly IOrdersService ordersService;
+        //private readonly IHtmlLocalizer<HomeController> _localizer;
 
         public HomeController(ILocationsService locationsService, IOrdersService ordersService)
         {
             this.locationsService = locationsService;
             this.ordersService = ordersService;
+            //_localizer = localizer;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string culture)
         {
-            var locationsList = this.locationsService.GetAllLocationNames();
+            var locationsList = locationsService.GetAllLocationNames();
 
-            this.ViewData["FinishedOrders"] = this.ordersService.UserFinishedOrders(this.User.Identity.Name);
-            return this.View(new SearchCarsViewModel { Locations = locationsList });
+            ViewData["FinishedOrders"] = ordersService.UserFinishedOrders(User.Identity.Name);
+            return View(new SearchCarsViewModel { Locations = locationsList });
         }
 
         public IActionResult Privacy()
         {
-            return this.View();
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return this.View(
-                new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
+            return View(
+                new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

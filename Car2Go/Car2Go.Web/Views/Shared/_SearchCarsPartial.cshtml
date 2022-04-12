@@ -1,25 +1,26 @@
 ﻿@model Car2Go.Web.ViewModels.Home.SearchCarsViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 <div class="col-md-7 card" style="background-color: white; font-size:150%">
     <form asp-controller="Cars" asp-action="Available" method="get">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="form-row" style="margin-top: 3%">
             <div class="col-md-6 mb-3">
-                <label asp-for="Pickup" class="text-black-50"></label>
+                <label asp-for="Pickup" class="text-black-50">@localizer["Pick Up Date"]</label>
                 <input asp-for="Pickup" class="form-control" />
             </div>
             <div class="col-md-6 mb-3">
-                <label asp-for="Return" class="text-black-50"></label>
+                <label asp-for="Return" class="text-black-50">@localizer["Return Date"]</label>
                 <input asp-for="Return" class="form-control" />
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-6 mb-3">
-                <label asp-for="PickupPlace" class="text-black-50">Pick Up location for the car</label>
+                <label asp-for="PickupPlace" class="text-black-50">@localizer["Pick Up location for the car"]</label>
                 <select class="custom-select" asp-for="PickupPlace">
                      @foreach(var location in Model.Locations)
         {
-            <option value="@location">@location</option>
+            <option value="@location">@localizer[@location]</option>
         }
                 </select>
                 <span asp-validation-for="PickupPlace"
@@ -27,19 +28,19 @@
             </div>
 
             <div class="col-md-6 mb-3">
-                <label asp-for="ReturnPlace" class="text-black-50">Return location for the car</label>
+                <label asp-for="ReturnPlace" class="text-black-50">@localizer["Return location for the car"]</label>
                 <select class="custom-select" asp-for="ReturnPlace">
 
                     @foreach (var location in Model.Locations)
                         {
-                            <option value="@location">@location</option>
+                            <option value="@location">@localizer[@location]</option>
                         }
                 </select>
                 <span asp-validation-for="ReturnPlace"
                       class="text-danger"></span>
             </div>
         </div>
-        <button class="btn btn-warning" type="submit" style="margin-bottom:3%">Reservation</button>
+        <button class="btn btn-warning" type="submit" style="margin-bottom:3%">@localizer["Reservation"]</button>
 
     </form>
 </div>

@@ -304,6 +304,14 @@
         "runtime": {
           "Car2Go.Web.dll": {}
         },
+        "resources": {
+          "en/Car2Go.Web.resources.dll": {
+            "locale": "en"
+          },
+          "ru/Car2Go.Web.resources.dll": {
+            "locale": "ru"
+          }
+        },
         "compile": {
           "Car2Go.Web.dll": {}
         }

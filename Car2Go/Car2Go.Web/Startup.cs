@@ -17,6 +17,11 @@ using Car2Go.Services;
 using Car2Go.Services.Data;
 using Car2Go.Services.Mapping;
 using Car2Go.Web.ViewModels;
+using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace Car2Go.Web
 {
@@ -45,6 +50,23 @@ namespace Car2Go.Web
                 {
                     options.CheckConsentNeeded = context => true;
                     options.MinimumSameSitePolicy = SameSiteMode.None;
+                });
+
+            //Globalization
+            services.AddLocalization(opt => { opt.ResourcesPath = "Resources"; });
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+
+            services.Configure<RequestLocalizationOptions>(
+                opt =>
+                {
+                    var supportedCultures = new List<CultureInfo>
+                    {
+                        new CultureInfo("en"),
+                        new CultureInfo("ru")
+                    };
+                    opt.DefaultRequestCulture = new RequestCulture("en");
+                    opt.SupportedCultures = supportedCultures;
+                    opt.SupportedUICultures = supportedCultures;
                 });
 
             services.AddControllersWithViews(
@@ -110,6 +132,14 @@ namespace Car2Go.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //Globalization
+            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
+            //var supportedCultures = new[] { "en", "ru" };
+            //var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
+            //    .AddSupportedCultures(supportedCultures)
+            //    .AddSupportedUICultures(supportedCultures);
+            //app.UseRequestLocalization(localizationOptions);
 
             app.UseEndpoints(
                 endpoints =>

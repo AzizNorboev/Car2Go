@@ -1,7 +1,9 @@
 ﻿@*@model Car2Go.Web.ViewModels.Cars.CarsLstinViewtModel*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{ ViewData["Title"] = "Home Page"; }
 
 
+    <h1>@localizer["HelloWorld"]</h1>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +36,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+
+
 
     <div id="preloader"></div>
     <section class="banner-section banner-section--style2 bg_img" data-background="/assets/images/Captiva.jpg">

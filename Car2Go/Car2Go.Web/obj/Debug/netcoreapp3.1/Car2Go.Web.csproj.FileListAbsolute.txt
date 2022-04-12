@@ -487,3 +487,17 @@ C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcor
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Orders\Delete.cshtml.g.cs
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Orders\MyOrders.cshtml.g.cs
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Orders\MyOrders2.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\bin\Debug\netcoreapp3.1\en\Car2Go.Web.resources.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Home.Index.en.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.csproj.GenerateResource.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\en\Car2Go.Web.resources.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\bin\Debug\netcoreapp3.1\ru\Car2Go.Web.resources.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Controllers.HomeController.en.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Controllers.HomeController.ru.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Home.Index.ru.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\ru\Car2Go.Web.resources.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CulturePartial.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Shared._Layout.en.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Shared._Layout.ru.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Shared._SearchCarsPartial.en.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Shared._SearchCarsPartial.ru.resources
