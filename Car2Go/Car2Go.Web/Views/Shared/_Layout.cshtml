@@ -40,13 +40,12 @@
                                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Cars" asp-action="Index"><b>@localizer["Cars"] Admin</b></a>
                             </li>
                         }
-
-                        <li class="nav-link">
-                                @await Html.PartialAsync("_CulturePartial")    @*<partial name ="_CulturePartial" />*@
-                        </li>
                     </ul>
                 </div>
             </div>
+            <li class="nav-link" style="margin-right: 100px">
+                                @await Html.PartialAsync("_CulturePartial")    @*<partial name ="_CulturePartial" />*@
+             </li>
         </nav>
     </header>
     <div class="container">

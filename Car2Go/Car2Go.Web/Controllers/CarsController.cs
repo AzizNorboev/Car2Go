@@ -22,17 +22,21 @@ namespace Car2Go.Web.Controllers
 
         public IActionResult All(string searchTerm, string culture, int id = 1)
         {
+            if (!string.IsNullOrEmpty(searchTerm))
+            {          
+                searchTerm = char.ToUpper(searchTerm[0]) + searchTerm.Substring(1);
+            }
             const int ItemsPerPage = 6;
             CarsLstinViewtModel viewModel;
             if (!string.IsNullOrEmpty(searchTerm)) 
             {
                 viewModel = new CarsLstinViewtModel
-               {
+              {
                    ItemsPerPage = ItemsPerPage,
                    PageNumber = id,
                    CarsCount = this.carsService.GetCount(),
                    Cars = this.carsService.GetAll(id, ItemsPerPage).Where(a => a.Model.Contains(searchTerm))
-               };
+                };
             }
             else
             {
@@ -52,18 +56,19 @@ namespace Car2Go.Web.Controllers
         public IActionResult Available(SearchCarsViewModel model, string searchTerm)
         {
             if (!this.User.Identity.IsAuthenticated)
-        {
+            {
                 return this.Redirect("/Identity/Account/Login");
             }
 
-            //if (!this.ModelState.IsValid)
-            //   {
-            //   return this.RedirectToAction("Index", "Home");
-            //}
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                searchTerm = char.ToUpper(searchTerm[0]) + searchTerm.Substring(1);
+            }
             var cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace).ToList();
             if (!string.IsNullOrEmpty(searchTerm))
             { 
-             cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace).Where(c => c.Model.Contains(searchTerm)).ToList();
+             cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace)
+                    .Where(c => c.Model.Contains(searchTerm)).ToList();
             }
             var viewModel = new AvailableCarsViewModel
             {
@@ -81,11 +86,6 @@ namespace Car2Go.Web.Controllers
 
         public async Task<IActionResult> DetailsAsync(int id)
         {
-            //const int ItemsPerPage = 1;
-            //var viewModel = new CarsLstinViewtModel
-            //{
-            //    Cars = this.carsService.GetAll(id, ItemsPerPage),
-            //};
             if (id == null)
             {
                 return this.NotFound();

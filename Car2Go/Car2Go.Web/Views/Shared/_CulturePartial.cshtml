@@ -6,11 +6,37 @@
     var culture = Context.Features.Get<IRequestCultureFeature>();
     var cultureList = locOptions.Value.SupportedUICultures.Select(x => new SelectListItem{Value = x.Name, Text = x.Name}).ToList();
     var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"{Context.Request.Path.Value}{Context.Request.QueryString}";
+    string url = Context.Request.Path;
+    var fsaf = "fsaf";
 }
 
-<div>
+@{
+    if(url == "/")
+        {
+            <div>
     <form asp-action="Index" asp-controller = "Home" method="get">
         <select name = "culture" onchange="this.form.submit();" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList">
     </select>
     </form>
-</div>
+        </div>
+    }
+    else if (url.Contains("Cars/All"))
+    {
+         <div>
+    <form asp-action="Index" asp-controller = "Cars" method="get">
+        <select name = "culture" onchange="this.form.submit();" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList">
+    </select>
+    </form>
+        </div>
+    }
+    else if (url.Contains("Cars/Available"))
+    {
+         <div>
+    <form asp-action="Available" asp-controller = "Cars" method="get">
+        <select name = "culture" onchange="this.form.submit();" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList">
+    </select>
+    </form>
+        </div>
+    }
+}
+

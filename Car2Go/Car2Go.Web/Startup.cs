@@ -78,22 +78,10 @@ namespace Car2Go.Web
 
             services.AddSingleton(this.configuration);
 
-            // Config Cloud Storage
-            //Account account = new Account(
-            //    this.configuration["Cloudinary:AppName"],
-            //    this.configuration["Cloudinary:AppName"],
-            //    this.configuration["Cloudinary:AppName"]);
-
-            //Cloudinary cloudinary = new Cloudinary(account);
-
-            //services.AddSingleton(cloudinary);
-
             // Data repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
-            // services.AddTransient<IUserStore<ApplicationUser>, ApplicationUserStore>();
-            // services.AddTransient<IRoleStore<ApplicationRole>, ApplicationRoleStore>();
             services.AddTransient<ILocationsService, LocationsService>();
             services.AddTransient<ICarsService, CarsService>();
             services.AddTransient<IOrdersService, OrdersService>();

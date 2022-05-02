@@ -1,9 +1,10 @@
 ﻿@model Car2Go.Web.ViewModels.Cars.AvailableCarsViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewData["Title"] = "Available cars";
 }
        
-<h1 style="margin-top:2%">Available cars for the period @Model.Start.Date.ToShortDateString() - @Model.End.Date.ToShortDateString()</h1>
+<h1 style="margin-top:2%">@localizer["Available cars for the period"] @Model.Start.Date.ToShortDateString() - @Model.End.Date.ToShortDateString()</h1>
 
 <hr class="border-info" />
 
@@ -12,7 +13,7 @@
                  <div class="t">
         <input type="text" name="searchTerm" style="height: 35px;"/>
          </div>
-        <input type="submit" value="Search By Car Model" style="margin-left: 10px; border-color: #abc8f5; background-color:#96d117"/>
+        <input type="submit" value="@localizer["Search By Car Model"]" style="margin-left: 10px; border-color: #abc8f5; background-color:#96d117"/>
         </div>
         </form>
         <style>
@@ -28,7 +29,7 @@
         </style>
 @if (Model.Cars.Count == 0)
 {
-    <h1>Sorry, we dont have any available car in this location.</h1>
+    <h1>@localizer["Sorry, we dont have any available car in this location."]</h1>
 }
 else
 {

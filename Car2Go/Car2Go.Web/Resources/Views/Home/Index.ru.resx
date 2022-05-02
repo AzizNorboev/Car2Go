@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Car2Go is the leading national car rental company in Uzbekistan. We operate with the fleet in the country, which currently consists of over cars, 90% of which are brand new or up to 3 years old. We offer national coverage of the service through a chain of over service offices in the country ." xml:space="preserve">
+    <value>Car2Go — ведущая национальная компания по аренде автомобилей в Узбекистане. Мы работаем с автопарком в стране, который в настоящее время состоит из более чем автомобилей, 90% из которых новые или не старше 3 лет. Мы предлагаем национальное покрытие услуги через сеть офисов по обслуживанию в стране.</value>
+  </data>
   <data name="Cars" xml:space="preserve">
     <value>Машины</value>
+  </data>
+  <data name="happy customer" xml:space="preserve">
+    <value>Довольных клиентов</value>
   </data>
   <data name="Hello" xml:space="preserve">
     <value>Привет</value>
@@ -143,5 +149,17 @@
   </data>
   <data name="Return Date" xml:space="preserve">
     <value>День возврата</value>
+  </data>
+  <data name="solutions" xml:space="preserve">
+    <value>Решения</value>
+  </data>
+  <data name="total car" xml:space="preserve">
+    <value>Количество машин</value>
+  </data>
+  <data name="travel time" xml:space="preserve">
+    <value>km пройдено</value>
+  </data>
+  <data name="We are Best Company to Find and rent a Car" xml:space="preserve">
+    <value>Мы лучшая компания по поиску и аренде автомобилей</value>
   </data>
 </root>

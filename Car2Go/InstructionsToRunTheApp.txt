@@ -1,0 +1,19 @@
+Instructions to run the application:
+
+1. Open package manager console and type: update-database then hit enter. 
+
+2. Then open Microsoft SQL Server Management Studio and connect to ‘(LocalDB)\MSSQLLocalDB’ server. 
+Find Database Car2Go, Get Id of AspNetUsers table's Admin@gmail.com record and 
+AspNetRoles table's Adminstrator record then run the following query to give admin
+roles to the default user Admin@gmail.com: 
+
+ INSERT INTO AspNetUserRoles (UserId, RoleId)
+  VALUES (Id of AspNetUsers table's Admin@gmail.com, Id of AspNetRoles table's Adminstrator record)
+
+Example:
+INSERT INTO AspNetUserRoles (UserId, RoleId)
+  VALUES ('4ccbfe86-5b23-486f-aa50-775c93ac200c', 'f23faa19-12ac-4df4-8614-452f20e29550')
+ 
+
+UserId is always the same, but RoleId will be generated randomly each time you apply migrations for 
+the first time. That is why get the Id of Administrator record from AspNetRoles, paste as the second Parameter into the query above. 

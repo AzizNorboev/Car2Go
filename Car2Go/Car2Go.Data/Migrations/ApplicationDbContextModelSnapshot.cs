@@ -137,6 +137,26 @@ namespace Car2Go.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "4ccbfe86-5b23-486f-aa50-775c93ac200c",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "12559aa2-bc8c-4d00-95b0-f23d5e649948",
+                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "Admin@gmail.com",
+                            EmailConfirmed = false,
+                            IsDeleted = false,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN@GMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC2j/AgRm1/yd236aHmVHG/shdVIS8hmOuUZItZDWB3uYjJf4WMIVK7eSRU78QxEIg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "a0c680b7-25f6-4f14-b287-d4bcffcb8a28",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin@gmail.com"
+                        });
                 });
 
             modelBuilder.Entity("Car2Go.Data.Models.Car", b =>
@@ -195,11 +215,11 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(9021),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(4496),
                             Description = "Chevrolet Cobalt is a family sedan created by the designers of the Brazilian division of the GM Corporation using standard GM global development processes. Cobalt was developed by GM's global team to become the world benchmark in its segment and the leader in sales in growing markets. Chevrolet Cobalt combines comfort, sophistication and high dynamic qualities, as well as timeless traditional classic design. To ensure better safety, the Chevrolet Cobalt, manufactured from high-strength steel, is equipped with ABS (anti-lock braking system) and driver and front passenger airbags",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/ca519572d01038ee51311f82f9384204.jpg",
-                            InUse = true,
+                            InUse = false,
                             IsDeleted = false,
                             Model = "Cobalt",
                             PricePerDay = 180000m,
@@ -208,8 +228,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 12,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(5947),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://tasinha-photos-kluz.kcdn.online/webp/79/79646cb0-2e11-49b9-ae7a-50454c50b56c/1-160x120.jpg",
+                            InUse = false,
+                            IsDeleted = false,
+                            Model = "Cobalt",
+                            PricePerDay = 170000m,
+                            Speed = 200,
+                            Year = 2019
+                        },
+                        new
+                        {
                             Id = 2,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(503),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6014),
                             Description = "The Nexia is one of the most compact, stylish and popular cars in the world, combining a sporty look and a spacious, comfortable interior. It is easy to operate and has a high-tech security system. Quality interior decoration materials are carefully thought out to the smallest detail. The large luggage allows you to take everything you need with you on the trip without sacrificing anything.",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/e2d6a236bd002eb0ce3b4b7613f009c7.jpg",
@@ -222,8 +256,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 13,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6039),
+                            Description = "good",
+                            GearType = 0,
+                            Image = "https://tasinha-photos-kluz.kcdn.online/webp/04/04f10e23-aff0-4388-86d0-62bd87f06ad5/1-160x120.jpg",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "Nexia 3",
+                            PricePerDay = 170000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 3,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(580),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6055),
                             Description = "Designers, working on a new generation of Chevrolet Malibu, tried to give the model more aggressiveness in the exterior. The novelty, unlike the previous generation, has a completely different exterior design. The presence of broken lines and bends gives the sedan a dynamic and makes it particularly attractive. The dual easy-to-recognize branded Malibu radiator grille is now equipped with a narrower head LED optics. The relief impressions on the sides of the body together with the rear part are similar in many respects to the Impala sedan, but in general the majority of the body elements are similar to the legendary Camaro, but it is only externally. At the same time, due to careful study of individual body parts, it was possible to achieve excellent aerodynamic performance. In the Uzbek market the car will be presented in 4 colors (pearl white, white-smoky, dark gray and black).",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/60e102ca38452ea6ba25541824d9d045.jpg",
@@ -236,8 +284,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 14,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6072),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://tasinha-photos-kluz.kcdn.online/webp/2f/2fcac581-4e12-4d0c-b062-84db5ecadf37/5-160x120.jpg",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "Malibu",
+                            PricePerDay = 280000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 4,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(599),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6121),
                             Description = "The Chevrolet Tracker is an automotive nameplate that has been used by Chevrolet for two different vehicle lines. Chevrolet Tracker (Americas): since 1988 for the 1989 model year, spanning two generations, Chevrolet has rebadged a version of the Suzuki Escudo as the Tracker.",
                             GearType = 2,
                             Image = "https://i.ibb.co/PF4pxf1/52.jpg",
@@ -250,8 +312,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 15,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6139),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://www.autostrada.uz/wp-content/uploads/2020/12/20210115_123901-001.jpg",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "Chevrolet Tracker 2",
+                            PricePerDay = 300000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 5,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(616),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6154),
                             Description = "The Chevrolet Tracker is an automotive nameplate that has been used by Chevrolet for two different vehicle lines. Chevrolet Tracker (Americas): since 1988 for the 1989 model year, spanning two generations, Chevrolet has rebadged a version of the Suzuki Escudo as the Tracker.",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/c892a6c45990f70c4531efb3b1c95a68.jpg",
@@ -264,8 +340,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 16,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6170),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://auto.ironhorse.ru/wp-content/uploads/2017/06/Tracker-New.jpg",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "Chevrolet Tracker",
+                            PricePerDay = 350000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 6,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(635),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6186),
                             Description = "The Optima is a vehicle that delivers all of these virtues in a stylish, value-laden package that’s filled with features usually found on pricier cars. With outstanding reliability and extensive warranty coverage, savvy sedan shoppers should take this recently redesigned car for a test drive.",
                             GearType = 2,
                             Image = "https://i.dir-i.net/CMS/2019/12/28/k/5f_kzmt31.jpg",
@@ -278,8 +368,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 17,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6200),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://www.motortrend.com/uploads/sites/5/2018/10/2019-Kia-Optima-SX-front-three-quarter-in-motion-3.jpg",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "Kia Optima",
+                            PricePerDay = 260000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 7,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(651),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6214),
                             Description = "And the most interesting is the motor range. The two-liter car is equipped with a nine-speed automatic, and the other two with a six-speed automatic. Drive - front or full. The fuel tank has a volume of 55 l, a 2.0 Turbo engine, consumption starts from 8.2 l / 100 km in the urban cycle. Acceleration time of the Chevrolet Equinox is 7.8 s to 100 km / h.",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/2c2252e409368d0d3549beaa3e0651a4.jpg",
@@ -293,7 +397,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(667),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6229),
                             Description = "The new Chevrolet Traverse has everything to make every kilometer special for you and your family. Up to 8 passenger seats and the most spacious luggage space in the class, the function of choosing a driving mode and an advanced all-wheel drive system, a solid appearance and a well-designed interior - this car is able to adapt to any task. Add to this the latest security technology, as well as additional features for your comfort, and you will understand why Traverse is worthy of your choice.",
                             GearType = 1,
                             Image = "https://blogmedia.dealerfire.com/wp-content/uploads/sites/1074/2019/12/2020-Honda-Ridgeline-exterior-side-shot-with-Obsidian-Blue-Pearl-paint-color-parked-on-a-beach-line-of-gravel-and-sand-next-to-the-ocean_o.jpg",
@@ -306,8 +410,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 18,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6244),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://fichasmotor.com/images/chevrolet/chevrolet-traverse-i-3-6-v6-281-cv-awd-automatico.webp",
+                            InUse = true,
+                            IsDeleted = false,
+                            Model = "CHEVROLET TRAVERSE",
+                            PricePerDay = 280000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 9,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(683),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6258),
                             Description = "A full-size SUV that combines technology, performance, design and safety is all about it - the Chevrolet Trailblazer. If you need a car with a powerful engine for both travel and everyday life, then Trailblazer is a great choice",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/6be5fb769c9b8ef6509eb3f3a1fc497a.jpg",
@@ -320,12 +438,26 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 19,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6273),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzsEfyLUAVg2o3cjhWRZ4el8z6T6dCU7SzmA&usqp=CAU",
+                            InUse = false,
+                            IsDeleted = false,
+                            Model = "CHEVROLET TRAILBLAZER",
+                            PricePerDay = 390000m,
+                            Speed = 200,
+                            Year = 2020
+                        },
+                        new
+                        {
                             Id = 10,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(731),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6288),
                             Description = "The Impala continues to reign as the leading large sedan. Slide behind the wheel and you can see why. Roomy, supportive seats put you in the perfect position to access the intuitive controls. Despite its prodigious size, the Impala’s handling is responsive and secure.",
                             GearType = 2,
                             Image = "https://banner2.cleanpng.com/20180410/xrw/kisspng-2017-chevrolet-impala-2018-chevrolet-impala-chevro-chevrolet-5accd70885ac83.6020416415233738325475.jpg",
-                            InUse = true,
+                            InUse = false,
                             IsDeleted = false,
                             Model = "Chevrolet Impala",
                             PricePerDay = 300000m,
@@ -334,8 +466,22 @@ namespace Car2Go.Data.Migrations
                         },
                         new
                         {
+                            Id = 20,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6302),
+                            Description = "",
+                            GearType = 0,
+                            Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW3yA6kh0qsD_IP65A3K9Ibsbkm1k8x2gaEQ&usqp=CAU",
+                            InUse = false,
+                            IsDeleted = false,
+                            Model = "Chevrolet Impala",
+                            PricePerDay = 280000m,
+                            Speed = 200,
+                            Year = 2018
+                        },
+                        new
+                        {
                             Id = 11,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 769, DateTimeKind.Utc).AddTicks(748),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6317),
                             Description = "If appearance is important, then Lacetti is for you. Correct proportions, streamlined shapes, relief lines harmoniously combined in this car, which has a respectable interior and exterior. Lacetti comfortably accommodates five people in a modern laconic salon. The instrument panel features a sense of proportion and variety of options. The arrangement of the instruments with chrome elements is carefully thought out. Its driving qualities are thoroughly tested and perfected.",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/8c8ad114c16e10db77c7953a2afc5b62.jpg",
@@ -344,6 +490,20 @@ namespace Car2Go.Data.Migrations
                             Model = "CHEVROLET LACETTI",
                             PricePerDay = 200000m,
                             Speed = 280,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6331),
+                            Description = "in good condition",
+                            GearType = 0,
+                            Image = "https://uzautomotors.com/images/uploads/ca519572d01038ee51311f82f9384204.jpg",
+                            InUse = false,
+                            IsDeleted = false,
+                            Model = "CHEVROLET LACETTI",
+                            PricePerDay = 180000m,
+                            Speed = 200,
                             Year = 2020
                         });
                 });
@@ -415,70 +575,70 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 767, DateTimeKind.Utc).AddTicks(9627),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(1932),
                             IsDeleted = false,
                             Name = "Tashkent International Airport"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7095),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2836),
                             IsDeleted = false,
                             Name = "Chilanzar Subway Station"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7201),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2875),
                             IsDeleted = false,
                             Name = "Hilton Hotel"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7219),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2890),
                             IsDeleted = false,
                             Name = "Mega Planet"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7234),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2904),
                             IsDeleted = false,
                             Name = "North Train Station"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7251),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2919),
                             IsDeleted = false,
                             Name = "South Train Station"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7265),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2932),
                             IsDeleted = false,
                             Name = "Bunyodkor Stadium"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7279),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2944),
                             IsDeleted = false,
                             Name = "Oybek Subway Station"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7293),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2957),
                             IsDeleted = false,
                             Name = "Park Amir Temur"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedOn = new DateTime(2022, 4, 1, 10, 27, 6, 768, DateTimeKind.Utc).AddTicks(7307),
+                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2971),
                             IsDeleted = false,
                             Name = "Buyuk Ipak Yoli Subway Station"
                         });

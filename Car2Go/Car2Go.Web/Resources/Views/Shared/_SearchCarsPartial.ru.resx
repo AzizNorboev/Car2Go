@@ -138,11 +138,17 @@
   <data name="Pick Up Date" xml:space="preserve">
     <value>Дата доставки</value>
   </data>
+  <data name="Pick Up location for the car" xml:space="preserve">
+    <value>Место доставки</value>
+  </data>
   <data name="Reservation" xml:space="preserve">
     <value>Забронировать</value>
   </data>
   <data name="Return Date" xml:space="preserve">
     <value>День возврата</value>
+  </data>
+  <data name="Return location for the car" xml:space="preserve">
+    <value>Место возврата</value>
   </data>
   <data name="Tashkent International Airport" xml:space="preserve">
     <value>Международный Аэропорт Ташкента</value>

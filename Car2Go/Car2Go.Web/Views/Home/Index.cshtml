@@ -2,8 +2,6 @@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{ ViewData["Title"] = "Home Page"; }
 
-
-    <h1>@localizer["HelloWorld"]</h1>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +49,8 @@
                 <div class="col-lg-5">
                     <div class="block-area">
                         <div class="block-header">
-                            <h2 class="title">We are Best Company to Find and rent a Car</h2>
-                            <p> Car2Go is the leading national car rental company in Uzbekistan. We operate with the fleet in the country, which currently consists of over cars, 90% of which are brand new or up to 3 years old. We offer national coverage of the service through a chain of over service offices in the country .</p>
+                            <h2 class="title">@localizer["We are Best Company to Find and rent a Car"]</h2>
+                            <p> @localizer["Car2Go is the leading national car rental company in Uzbekistan. We operate with the fleet in the country, which currently consists of over cars, 90% of which are brand new or up to 3 years old. We offer national coverage of the service through a chain of over service offices in the country ."]</p>
                         </div>
 
                     </div>
@@ -71,7 +69,7 @@
                         </div>
                         <div class="content">
                             <span class="counter">0</span>
-                            <span class="title">total car</span>
+                            <span class="title">@localizer["total car"]</span>
                         </div>
                     </div>
                 </div><!-- counter-item end -->
@@ -82,7 +80,7 @@
                         </div>
                         <div class="content">
                             <span class="counter">0</span>
-                            <span class="title">happy customer</span>
+                            <span class="title" style="font-size: 15.19px">@localizer["happy customer"]</span>
                         </div>
                     </div>
                 </div><!-- counter-item end -->
@@ -93,7 +91,7 @@
                         </div>
                         <div class="content">
                             <span class="counter">0</span>
-                            <span class="title">travel time</span>
+                            <span class="title">@localizer["travel time"]</span>
                         </div>
                     </div>
                 </div><!-- counter-item end -->
@@ -104,7 +102,7 @@
                         </div>
                         <div class="content">
                             <span class="counter">0</span>
-                            <span class="title">solution</span>
+                            <span class="title">@localizer["solutions"]</span>
                         </div>
                     </div>
                 </div>

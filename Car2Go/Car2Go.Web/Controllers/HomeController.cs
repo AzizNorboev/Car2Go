@@ -14,13 +14,11 @@ namespace Car2Go.Web.Controllers
     {
         private readonly ILocationsService locationsService;
         private readonly IOrdersService ordersService;
-        //private readonly IHtmlLocalizer<HomeController> _localizer;
 
         public HomeController(ILocationsService locationsService, IOrdersService ordersService)
         {
             this.locationsService = locationsService;
             this.ordersService = ordersService;
-            //_localizer = localizer;
         }
 
         public IActionResult Index(string culture)
