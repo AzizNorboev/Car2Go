@@ -84,6 +84,7 @@ namespace Car2Go.Web.Controllers
 
             var result = await this.ordersService.MakeOrder(this.User.Identity.Name, inputModel.Id, inputModel.PickUpPlace, inputModel.ReturnPlace, inputModel.Price, inputModel.PickUp, inputModel.Return);
             var carModel = this.carsService.GetCarModelById(id: inputModel.Id);
+
             var days = (inputModel.Return - inputModel.PickUp).Days;
 
             return this.RedirectToAction(nameof(this.MyOrders));

@@ -4,6 +4,7 @@ using System.Linq;
 using Car2Go.Data.Common.Repositories;
 using Car2Go.Data.Models;
 using Car2Go.Web.ViewModels.Cars;
+using Microsoft.EntityFrameworkCore;
 
 namespace Car2Go.Services.Data
 {
@@ -11,10 +12,12 @@ namespace Car2Go.Services.Data
     public class CarsService : ICarsService
     {
         private readonly IDeletableEntityRepository<Car> carsRepository;
+        private readonly IDeletableEntityRepository<Order> dataRepository;
 
-        public CarsService(IDeletableEntityRepository<Car> carsRepository)
+        public CarsService(IDeletableEntityRepository<Car> carsRepository, IOrdersService ordersService, IDeletableEntityRepository<Order> dataRepository)
         {
             this.carsRepository = carsRepository;
+            this.dataRepository = dataRepository;
         }
 
         public IEnumerable<Car> GetAll(int page, int itemsPerRege = 6)
@@ -51,22 +54,50 @@ namespace Car2Go.Services.Data
                 dates.Add(dt);
             }
 
-            var cars = this.carsRepository.AllAsNoTracking().
-                 Where(x => x.RentDays.Any(d => dates.Contains(d.RentDate)) == false).
-                 Select(x => new ListCarInputModel
-                 {
-                     Id = x.Id,
-                     Image = x.Image,
-                     Description = x.Description,
-                     GearType = x.GearType,
-                     PricePerDay = x.PricePerDay,
-                     Model = x.Model,
-                     Year = x.Year,
-                     Days = dates.Count(),
-                     StartRent = start,
-                     End = end,
-                 }).
-                ToList();
+                var cars = this.carsRepository.AllAsNoTracking().
+                  Where(x => x.RentDays.Any(d => dates.Contains(d.RentDate)) == false).
+                  Select(x => new ListCarInputModel
+                  {
+                      Id = x.Id,
+                      Image = x.Image,
+                      Description = x.Description,
+                      GearType = x.GearType,
+                      PricePerDay = x.PricePerDay,
+                      Model = x.Model,
+                      Year = x.Year,
+                      Days = dates.Count(),
+                      StartRent = start,
+                      End = end,
+                  }).
+                 ToList();
+
+
+            //Remove cars that orders contain
+            var Orders = dataRepository.All().Include(c => c.Car)
+                                          .Include(u => u.User)
+                                          .Include(l => l.PickUpLocation)
+                                          .Include(l => l.ReturnLocation);
+
+            List<ListCarInputModel> CarsToBeRemoved = new List<ListCarInputModel>();
+            foreach (var c in cars)
+            {
+                foreach(var r in Orders)
+                {
+                    if (r.CarId == c.Id)
+                    {
+                        Console.WriteLine(r.CarId + " " + c.Id);
+                        CarsToBeRemoved.Add(c);
+                    }
+                }
+            }
+            foreach(var c in CarsToBeRemoved)
+            {
+                if (cars.Contains(c))
+                {
+                    cars.Remove(c);
+                }
+            }
+
 
             return cars;
         }

@@ -49,6 +49,11 @@ namespace Car2Go.Web.ViewModels.Home
             {
                 yield return new ValidationResult(ReturnError);
             }
+
+            //if(Pickup.Date > DateTime.Now)
+            //{
+            //    throw new ArgumentException();
+            //}
         }
     }
 }
