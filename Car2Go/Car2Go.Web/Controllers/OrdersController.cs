@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using Car2Go.Data.Common.Repositories;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using Car2Go.Common;
 
 namespace Car2Go.Web.Controllers
 {
@@ -18,32 +21,50 @@ namespace Car2Go.Web.Controllers
         private readonly IDeletableEntityRepository<Order> dataRepository;
         private readonly ICarsService carsService;
         private readonly UserManager<ApplicationUser> userManager;
+        private string UserId = string.Empty;
 
         public OrdersController(
             ICarsService carsService,
             IDeletableEntityRepository<Order> dataRepository,
             IOrdersService ordersService,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IHttpContextAccessor httpContextAccessor)
         {
             this.carsService = carsService;
             this.dataRepository = dataRepository;
             this.ordersService = ordersService;
             this.userManager = userManager;
+            UserId = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         }
 
         [Authorize]
         public IActionResult MyOrders()
         {
-            var viewModel = new AllOrderInputViewModel
+            if (User.IsInRole(GlobalConstants.AdministratorRoleName))
             {
-                Orders = dataRepository.All().Include(c => c.Car)
-                                             .Include(u => u.User)
-                                             .Include(l => l.PickUpLocation)
-                                             .Include(l=>l.ReturnLocation)
-            };
-
-            return this.View(viewModel);
+                var viewModel1 = new AllOrderInputViewModel
+                {
+                    Orders = dataRepository.All().Include(c => c.Car)
+                                          .Include(u => u.User)
+                                          .Include(l => l.PickUpLocation)
+                                          .Include(l => l.ReturnLocation)
+                };
+                return this.View(viewModel1);
+            }
+            else
+            {
+                var viewModel = new AllOrderInputViewModel
+                {
+                    Orders = dataRepository.All().Include(c => c.Car)
+                                 .Include(u => u.User)
+                                 .Include(l => l.PickUpLocation)
+                                 .Include(l => l.ReturnLocation)
+                                 .Where(u => u.User.Id == UserId)
+                };
+                return this.View(viewModel);
+            }
         }
+
 
         [Authorize]
         [HttpPost]

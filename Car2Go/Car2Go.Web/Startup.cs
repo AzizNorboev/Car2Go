@@ -76,6 +76,8 @@ namespace Car2Go.Web
                 }).AddRazorRuntimeCompilation();
             services.AddRazorPages();
 
+            services.AddHttpContextAccessor();
+
             services.AddSingleton(this.configuration);
 
             // Data repositories

@@ -1,12 +1,12 @@
-﻿namespace Car2Go.Services.Data
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Car2Go.Data.Common.Repositories;
+using Car2Go.Data.Models;
+using Car2Go.Web.ViewModels.Cars;
 
-    using Car2Go.Data.Common.Repositories;
-    using Car2Go.Data.Models;
-    using Car2Go.Web.ViewModels.Cars;
+namespace Car2Go.Services.Data
+{
 
     public class CarsService : ICarsService
     {
