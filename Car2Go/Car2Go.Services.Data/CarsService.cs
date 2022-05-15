@@ -83,7 +83,7 @@ namespace Car2Go.Services.Data
             {
                 foreach(var r in Orders)
                 {
-                    if (r.CarId == c.Id)
+                    if (r.CarId == c.Id && r.Status != Car2Go.Data.Models.Enums.OrderStatus.Finished)
                     {
                         Console.WriteLine(r.CarId + " " + c.Id);
                         CarsToBeRemoved.Add(c);
