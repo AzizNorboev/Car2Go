@@ -83,6 +83,10 @@ namespace Car2Go.Services.Data
             {
                 foreach(var r in Orders)
                 {
+                    if(r.RentEnd.CompareTo(DateTime.Today) <= 0)
+                    {
+                        r.Status = Car2Go.Data.Models.Enums.OrderStatus.Finished;
+                    }
                     if (r.CarId == c.Id && r.Status != Car2Go.Data.Models.Enums.OrderStatus.Finished)
                     {
                         Console.WriteLine(r.CarId + " " + c.Id);
