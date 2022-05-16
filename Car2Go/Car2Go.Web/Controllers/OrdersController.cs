@@ -12,6 +12,7 @@ using Car2Go.Data.Common.Repositories;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Car2Go.Common;
+using System;
 
 namespace Car2Go.Web.Controllers
 {
@@ -91,11 +92,11 @@ namespace Car2Go.Web.Controllers
         }
 
         [Authorize]
-        public IActionResult Details(string id)
+        public IActionResult Details(string userName)
         {
             var viewModel = new OrdersDetailsViewModel
             {
-                Cars = this.ordersService.GetOrderById(id),
+                Cars = this.ordersService.GetOrderById(userName),
             };
 
             return this.View(viewModel);
@@ -121,7 +122,14 @@ namespace Car2Go.Web.Controllers
         [ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            await ordersService.Delete(id);
+            try
+            {
+                await ordersService.Delete(id);
+            }
+            catch(Exception ex)
+            {
+                return View("Error");
+            }
 
             return this.RedirectToAction(nameof(this.MyOrders));
         }

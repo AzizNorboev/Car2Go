@@ -1,0 +1,66 @@
+﻿
+@model Car2Go.Web.ViewModels.Orders.AllOrderInputViewModel
+
+@{ ViewData["Title"] = "Orders"; }
+
+<center>
+    <h1 style="margin-top:2%">
+        All Orders
+    </h1>
+</center>
+<hr class="border-info" />
+
+
+
+<table class="table table-hover border" name="allorders" id="allorders">
+    <thead>
+        <tr class="table-primary ">
+            <th scope="col">Order Id</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">User</th>
+            <th scope="col">Price</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Pick Up Location</th>
+            <th scope="col">Return Location</th>
+            <th scope="col">Details</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var order in Model.Orders)
+        {
+            if (order.Status.ToString() == "Canceled")
+            {
+@Html.Raw(" <tr class=\"table-danger\">") }
+else if (order.Status.ToString() == "Finished")
+{
+@Html.Raw(" <tr class=\"table-success\">") }
+else
+{
+@Html.Raw(" <tr class=\"table-warning\">") }
+        <tr>
+            <th scope="row"><a href="/orders/details/@order.Id">@order.Id.ToUpper()</a></th>
+            <td>@order.Car.Model</td>
+            <td>@order.User.Email</td>
+            <td>@order.Price UZS</td>
+            <td>@order.RentStart.ToShortDateString()</td>
+            <td>@order.RentEnd.ToShortDateString()</td>
+            <td>@order.Status.ToString()</td>
+            <td>@order.PickUpLocation.Name</td>
+            <td>@order.ReturnLocation.Name</td>
+            <td><a asp-action="Details" asp-route-id="@order.User.UserName">Details</a></td>
+            <td><a asp-action="Edit" asp-route-id="@order.Id">Edit</a></td>
+            <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
+        </tr>
+                                                        @Html.Raw(" </tr>")}
+        </tbody>
+    </table>
+
+    @if (Model.Orders.Count() > 0)
+    {
+        var spent = this.Model.Orders.Sum(x => x.Price);
+<h3 class="text-info">Total spent: @spent UZS</h3>}

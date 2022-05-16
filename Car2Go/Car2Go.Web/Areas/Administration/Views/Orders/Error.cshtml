@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3 style="color:red">Pick up date cannot be earier than today's date or later than return date</h3>
+
+<input type="button" value="OK" class="button"  onclick="location.href='@Url.Action("Index", "Orders")'" />
+
+<style type="text/css">
+    .button {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7');
+        /* for IE */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7');
+        /* for IE 8 and above */
+        background: -webkit-gradient(linear, left top, left bottom, from(#5384BE), to(#4386D7));
+        /* for webkit browsers */
+        background: -moz-linear-gradient(top, #5384BE, #4386D7);
+        /* for firefox 3.6+ */
+        background: -o-linear-gradient(top, #5384BE, #4386D7);
+        /* for Opera */
+        width: 70px;
+        margin-left:400px;
+        margin-top:30px;
+    }
+</style> 
