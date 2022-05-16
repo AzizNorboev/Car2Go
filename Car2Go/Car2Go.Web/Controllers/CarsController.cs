@@ -7,6 +7,7 @@ using Car2Go.Data.Common.Repositories;
 using Car2Go.Data.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Car2Go.Web.Controllers
 {
@@ -63,6 +64,11 @@ namespace Car2Go.Web.Controllers
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 searchTerm = char.ToUpper(searchTerm[0]) + searchTerm.Substring(1);
+            }
+
+            if(model.Pickup < DateTime.Now || model.Pickup > model.Return)
+            {
+                return View("Error");
             }
             var cars = this.carsService.GetAvailableCars(model.Pickup, model.Return, model.PickupPlace).ToList();
             if (!string.IsNullOrEmpty(searchTerm))

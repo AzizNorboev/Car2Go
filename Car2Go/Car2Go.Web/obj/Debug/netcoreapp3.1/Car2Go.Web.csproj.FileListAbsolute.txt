@@ -507,3 +507,4 @@ C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcor
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Cars.All.ru.resources
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Cars.Available.en.resources
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Car2Go.Web.Resources.Views.Cars.Available.ru.resources
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Error.cshtml.g.cs
