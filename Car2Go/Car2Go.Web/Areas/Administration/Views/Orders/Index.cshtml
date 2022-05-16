@@ -52,7 +52,7 @@ else
             <td>@order.Status.ToString()</td>
             <td>@order.PickUpLocation.Name</td>
             <td>@order.ReturnLocation.Name</td>
-            <td><a asp-action="Details" asp-route-id="@order.User.UserName">Details</a></td>
+            <td><a asp-action="Details" asp-route-id="@order.User.Email">Details</a></td>
             <td><a asp-action="Edit" asp-route-id="@order.Id">Edit</a></td>
             <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
         </tr>

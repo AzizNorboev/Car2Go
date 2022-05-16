@@ -50,11 +50,11 @@ namespace Car2Go.Web.Areas.Administration.Controllers
         }
 
         // GET: Administration/Cars/Details/5
-        public async Task<IActionResult> Details(string userName)
+        public async Task<IActionResult> Details(string id)
         {
             var viewModel = new OrdersDetailsViewModel
             {
-                Cars = ordersService.GetOrderById(userName),
+                Cars = ordersService.GetOrderById(id),
             };
 
             return View(viewModel);

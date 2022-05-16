@@ -92,16 +92,16 @@ namespace Car2Go.Web.Controllers
         }
 
         [Authorize]
-        public IActionResult Details(string userName)
+        public IActionResult Details(string id)
         {
             var viewModel = new OrdersDetailsViewModel
             {
-                Cars = this.ordersService.GetOrderById(userName),
+                Cars = this.ordersService.GetOrderById(id),
             };
 
             return this.View(viewModel);
         }
-        public async Task<IActionResult> Delete(string? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
