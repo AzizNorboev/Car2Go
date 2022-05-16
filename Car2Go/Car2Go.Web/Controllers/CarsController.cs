@@ -66,7 +66,7 @@ namespace Car2Go.Web.Controllers
                 searchTerm = char.ToUpper(searchTerm[0]) + searchTerm.Substring(1);
             }
 
-            if(model.Pickup < DateTime.Now || model.Pickup > model.Return)
+            if(model.Pickup < DateTime.Today || model.Pickup > model.Return)
             {
                 return View("Error");
             }
