@@ -41,6 +41,7 @@ namespace Car2Go.Data.Models
         [Required]
         public decimal PricePerDay { get; set; }
 
+        public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<CarRentDays> RentDays { get; set; }
     }
 }

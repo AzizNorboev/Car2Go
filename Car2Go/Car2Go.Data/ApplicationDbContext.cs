@@ -27,6 +27,8 @@ namespace Car2Go.Data
 
         public DbSet<Location> Locations { get; set; }
 
+        public DbSet<Review> Reviews { get; set; }
+
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<CarRentDays> CarRentDays { get; set; }
