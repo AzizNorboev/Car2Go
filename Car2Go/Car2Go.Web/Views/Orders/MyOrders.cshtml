@@ -33,27 +33,27 @@
         {
             if (order.Status.ToString() == "Canceled")
             {
-@Html.Raw(" <tr class=\"table-danger\">") }
-else if (order.Status.ToString() == "Finished")
-{
-@Html.Raw(" <tr class=\"table-success\">") }
-else
-{
-@Html.Raw(" <tr class=\"table-warning\">") }
-            <tr>
-<th scope="row"><a href="/orders/details/@order.Id">@order.Id.ToUpper()</a></th>
-                            <td>@order.Car.Model</td>
-                            <td>@order.User.Email</td>
-                            <td>@order.Price UZS</td>
-                            <td>@order.RentStart.ToShortDateString()</td>
-                            <td>@order.RentEnd.ToShortDateString()</td>
-                            <td>@order.Status.ToString()</td>
-                            <td>@order.PickUpLocation.Name</td>
-                            <td>@order.ReturnLocation.Name</td>                                                 
-                            <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
-             </tr>
-                                                        @Html.Raw(" </tr>")}
-        </tbody>
+                @Html.Raw(" <tr class=\"table-danger\">") }
+            else if (order.Status.ToString() == "Finished")
+            {
+                @Html.Raw(" <tr class=\"table-success\">") }
+            else
+            {
+                @Html.Raw(" <tr class=\"table-warning\">") }
+                <tr>
+                    <th scope="row"><a href="/orders/details/@order.User.Email">@order.Id.ToUpper()</a></th>
+                    <td><a href="/Cars/Details/@order.CarId">@order.Car.Model</a></td>
+                    <td><a href="/orders/details/@order.User.Email">@order.User.Email.ToUpper()</a></td>
+                    <td>@order.Price UZS</td>
+                    <td>@order.RentStart.ToShortDateString()</td>
+                    <td>@order.RentEnd.ToShortDateString()</td>
+                    <td>@order.Status.ToString()</td>
+                    <td>@order.PickUpLocation.Name</td>
+                    <td>@order.ReturnLocation.Name</td>
+                    <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
+                </tr>
+                @Html.Raw(" </tr>")}
+    </tbody>
     </table>
 
     @if (Model.Orders.Count() > 0)
