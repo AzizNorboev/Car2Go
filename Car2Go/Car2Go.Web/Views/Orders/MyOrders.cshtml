@@ -20,11 +20,12 @@
             <th scope="col">User</th>
             <th scope="col">Price</th>
             <th scope="col">Start Date</th>
-            <th scope="col">End Date</th>     
+            <th scope="col">End Date</th>
             <th scope="col">Status</th>
             <th scope="col">Pick Up Location</th>
-            <th scope="col">Return Location</th>          
+            <th scope="col">Return Location</th>
             <th scope="col">Delete</th>
+            <th scope="col">Rate</th>
         </tr>
     </thead>
     <tbody>
@@ -40,21 +41,29 @@
             else
             {
                 @Html.Raw(" <tr class=\"table-warning\">") }
-                <tr>
-                    <th scope="row"><a href="/orders/details/@order.User.Email">@order.Id.ToUpper()</a></th>
-                    <td><a href="/Cars/Details/@order.CarId">@order.Car.Model</a></td>
-                    <td><a href="/orders/details/@order.User.Email">@order.User.Email.ToUpper()</a></td>
-                    <td>@order.Price UZS</td>
-                    <td>@order.RentStart.ToShortDateString()</td>
-                    <td>@order.RentEnd.ToShortDateString()</td>
-                    <td>@order.Status.ToString()</td>
-                    <td>@order.PickUpLocation.Name</td>
-                    <td>@order.ReturnLocation.Name</td>
-                    <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
-                </tr>
+        <tr>
+            <th scope="row"><a href="/orders/details/@order.User.Email">@order.Id.ToUpper()</a></th>
+            <td><a href="/Cars/Details/@order.CarId">@order.Car.Model</a></td>
+            <td><a href="/orders/details/@order.User.Email">@order.User.Email.ToUpper()</a></td>
+            <td>@order.Price UZS</td>
+            <td>@order.RentStart.ToShortDateString()</td>
+            <td>@order.RentEnd.ToShortDateString()</td>
+            <td>@order.Status.ToString()</td>
+            <td>@order.PickUpLocation.Name</td>
+            <td>@order.ReturnLocation.Name</td>
+            <td><a asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
+            <td>
+                <form asp-controller="Reviews" asp-action="Preview" method="POST">
+                    <input type="hidden" value="@order.Car.Id" name="CarId" />
+                    <input type="hidden" value="@order.User.Id" name="ApplicationUserId" />
+                    <button type="submit" class="btn btn-warning w-100 ">Rate</button>
+                </form>
+            </td>
+        </tr>
                 @Html.Raw(" </tr>")}
     </tbody>
     </table>
+
 
     @if (Model.Orders.Count() > 0)
     {

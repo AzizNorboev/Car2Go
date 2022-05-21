@@ -1,0 +1,38 @@
+﻿
+@model Car2Go.Web.ViewModels.Reviews.AllReviewsInputViewModel
+
+@{ ViewData["Title"] = "My Orders"; }
+
+<center>
+    <h1 style="margin-top:2%">
+        My Orders
+    </h1>
+</center>
+<hr class="border-info" />
+
+
+
+<table class="table table-hover border" name="allorders" id="allorders">
+    <thead>
+        <tr class="table-primary ">
+            <th scope="col">Car Model</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Comment</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var review in Model.Reviews)
+        {
+            <tr>
+                <td><a href="/Cars/Details/@review.CarId">@review.Car.Model</a></td>
+                <td><a href="/orders/details/@review.User.Email">@review.User.Email.ToUpper()</a></td>
+                <td>@review.Rating</td>
+                <td>@review.Comment</td>
+                <td><a asp-action="Delete" asp-route-id="@review.Id">Delete</a></td>
+            </tr>
+            @Html.Raw(" </tr>")}
+    </tbody>
+</table>
