@@ -141,9 +141,9 @@ namespace Car2Go.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4ccbfe86-5b23-486f-aa50-775c93ac200c",
+                            Id = "1a3080f1-0324-498e-a59a-0f2448b15022",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "12559aa2-bc8c-4d00-95b0-f23d5e649948",
+                            ConcurrencyStamp = "ff8e0708-41ff-4b14-9d24-7cdc5d8305ed",
                             CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "Admin@gmail.com",
                             EmailConfirmed = false,
@@ -151,9 +151,9 @@ namespace Car2Go.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC2j/AgRm1/yd236aHmVHG/shdVIS8hmOuUZItZDWB3uYjJf4WMIVK7eSRU78QxEIg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC4RjnjMFvg645o7YYmrErMGKbvfiIZ2QqUwqy7UlWVpwY4MPx0HIAU1HtqUgqwbaQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a0c680b7-25f6-4f14-b287-d4bcffcb8a28",
+                            SecurityStamp = "dfccda28-128d-45b8-8627-fc8e8b1f75a1",
                             TwoFactorEnabled = false,
                             UserName = "Admin@gmail.com"
                         });
@@ -215,7 +215,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(4496),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(1141),
                             Description = "Chevrolet Cobalt is a family sedan created by the designers of the Brazilian division of the GM Corporation using standard GM global development processes. Cobalt was developed by GM's global team to become the world benchmark in its segment and the leader in sales in growing markets. Chevrolet Cobalt combines comfort, sophistication and high dynamic qualities, as well as timeless traditional classic design. To ensure better safety, the Chevrolet Cobalt, manufactured from high-strength steel, is equipped with ABS (anti-lock braking system) and driver and front passenger airbags",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/ca519572d01038ee51311f82f9384204.jpg",
@@ -229,7 +229,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(5947),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2768),
                             Description = "",
                             GearType = 0,
                             Image = "https://tasinha-photos-kluz.kcdn.online/webp/79/79646cb0-2e11-49b9-ae7a-50454c50b56c/1-160x120.jpg",
@@ -243,7 +243,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6014),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2836),
                             Description = "The Nexia is one of the most compact, stylish and popular cars in the world, combining a sporty look and a spacious, comfortable interior. It is easy to operate and has a high-tech security system. Quality interior decoration materials are carefully thought out to the smallest detail. The large luggage allows you to take everything you need with you on the trip without sacrificing anything.",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/e2d6a236bd002eb0ce3b4b7613f009c7.jpg",
@@ -257,7 +257,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6039),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2861),
                             Description = "good",
                             GearType = 0,
                             Image = "https://tasinha-photos-kluz.kcdn.online/webp/04/04f10e23-aff0-4388-86d0-62bd87f06ad5/1-160x120.jpg",
@@ -271,7 +271,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6055),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2876),
                             Description = "Designers, working on a new generation of Chevrolet Malibu, tried to give the model more aggressiveness in the exterior. The novelty, unlike the previous generation, has a completely different exterior design. The presence of broken lines and bends gives the sedan a dynamic and makes it particularly attractive. The dual easy-to-recognize branded Malibu radiator grille is now equipped with a narrower head LED optics. The relief impressions on the sides of the body together with the rear part are similar in many respects to the Impala sedan, but in general the majority of the body elements are similar to the legendary Camaro, but it is only externally. At the same time, due to careful study of individual body parts, it was possible to achieve excellent aerodynamic performance. In the Uzbek market the car will be presented in 4 colors (pearl white, white-smoky, dark gray and black).",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/60e102ca38452ea6ba25541824d9d045.jpg",
@@ -285,7 +285,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6072),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2894),
                             Description = "",
                             GearType = 0,
                             Image = "https://tasinha-photos-kluz.kcdn.online/webp/2f/2fcac581-4e12-4d0c-b062-84db5ecadf37/5-160x120.jpg",
@@ -299,7 +299,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6121),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2909),
                             Description = "The Chevrolet Tracker is an automotive nameplate that has been used by Chevrolet for two different vehicle lines. Chevrolet Tracker (Americas): since 1988 for the 1989 model year, spanning two generations, Chevrolet has rebadged a version of the Suzuki Escudo as the Tracker.",
                             GearType = 2,
                             Image = "https://i.ibb.co/PF4pxf1/52.jpg",
@@ -313,7 +313,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6139),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2923),
                             Description = "",
                             GearType = 0,
                             Image = "https://www.autostrada.uz/wp-content/uploads/2020/12/20210115_123901-001.jpg",
@@ -327,7 +327,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6154),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2937),
                             Description = "The Chevrolet Tracker is an automotive nameplate that has been used by Chevrolet for two different vehicle lines. Chevrolet Tracker (Americas): since 1988 for the 1989 model year, spanning two generations, Chevrolet has rebadged a version of the Suzuki Escudo as the Tracker.",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/c892a6c45990f70c4531efb3b1c95a68.jpg",
@@ -341,7 +341,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 16,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6170),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(2985),
                             Description = "",
                             GearType = 0,
                             Image = "https://auto.ironhorse.ru/wp-content/uploads/2017/06/Tracker-New.jpg",
@@ -355,7 +355,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6186),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3003),
                             Description = "The Optima is a vehicle that delivers all of these virtues in a stylish, value-laden package that’s filled with features usually found on pricier cars. With outstanding reliability and extensive warranty coverage, savvy sedan shoppers should take this recently redesigned car for a test drive.",
                             GearType = 2,
                             Image = "https://i.dir-i.net/CMS/2019/12/28/k/5f_kzmt31.jpg",
@@ -369,7 +369,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 17,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6200),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3019),
                             Description = "",
                             GearType = 0,
                             Image = "https://www.motortrend.com/uploads/sites/5/2018/10/2019-Kia-Optima-SX-front-three-quarter-in-motion-3.jpg",
@@ -383,7 +383,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6214),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3034),
                             Description = "And the most interesting is the motor range. The two-liter car is equipped with a nine-speed automatic, and the other two with a six-speed automatic. Drive - front or full. The fuel tank has a volume of 55 l, a 2.0 Turbo engine, consumption starts from 8.2 l / 100 km in the urban cycle. Acceleration time of the Chevrolet Equinox is 7.8 s to 100 km / h.",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/2c2252e409368d0d3549beaa3e0651a4.jpg",
@@ -397,7 +397,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6229),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3048),
                             Description = "The new Chevrolet Traverse has everything to make every kilometer special for you and your family. Up to 8 passenger seats and the most spacious luggage space in the class, the function of choosing a driving mode and an advanced all-wheel drive system, a solid appearance and a well-designed interior - this car is able to adapt to any task. Add to this the latest security technology, as well as additional features for your comfort, and you will understand why Traverse is worthy of your choice.",
                             GearType = 1,
                             Image = "https://blogmedia.dealerfire.com/wp-content/uploads/sites/1074/2019/12/2020-Honda-Ridgeline-exterior-side-shot-with-Obsidian-Blue-Pearl-paint-color-parked-on-a-beach-line-of-gravel-and-sand-next-to-the-ocean_o.jpg",
@@ -411,7 +411,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 18,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6244),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3062),
                             Description = "",
                             GearType = 0,
                             Image = "https://fichasmotor.com/images/chevrolet/chevrolet-traverse-i-3-6-v6-281-cv-awd-automatico.webp",
@@ -425,7 +425,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6258),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3076),
                             Description = "A full-size SUV that combines technology, performance, design and safety is all about it - the Chevrolet Trailblazer. If you need a car with a powerful engine for both travel and everyday life, then Trailblazer is a great choice",
                             GearType = 1,
                             Image = "https://uzautomotors.com/images/uploads/6be5fb769c9b8ef6509eb3f3a1fc497a.jpg",
@@ -439,7 +439,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 19,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6273),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3091),
                             Description = "",
                             GearType = 0,
                             Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzsEfyLUAVg2o3cjhWRZ4el8z6T6dCU7SzmA&usqp=CAU",
@@ -453,7 +453,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6288),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3106),
                             Description = "The Impala continues to reign as the leading large sedan. Slide behind the wheel and you can see why. Roomy, supportive seats put you in the perfect position to access the intuitive controls. Despite its prodigious size, the Impala’s handling is responsive and secure.",
                             GearType = 2,
                             Image = "https://banner2.cleanpng.com/20180410/xrw/kisspng-2017-chevrolet-impala-2018-chevrolet-impala-chevro-chevrolet-5accd70885ac83.6020416415233738325475.jpg",
@@ -467,7 +467,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 20,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6302),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3120),
                             Description = "",
                             GearType = 0,
                             Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW3yA6kh0qsD_IP65A3K9Ibsbkm1k8x2gaEQ&usqp=CAU",
@@ -481,7 +481,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6317),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3134),
                             Description = "If appearance is important, then Lacetti is for you. Correct proportions, streamlined shapes, relief lines harmoniously combined in this car, which has a respectable interior and exterior. Lacetti comfortably accommodates five people in a modern laconic salon. The instrument panel features a sense of proportion and variety of options. The arrangement of the instruments with chrome elements is carefully thought out. Its driving qualities are thoroughly tested and perfected.",
                             GearType = 2,
                             Image = "https://uzautomotors.com/images/uploads/8c8ad114c16e10db77c7953a2afc5b62.jpg",
@@ -495,7 +495,7 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 21,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(6331),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 660, DateTimeKind.Utc).AddTicks(3148),
                             Description = "in good condition",
                             GearType = 0,
                             Image = "https://uzautomotors.com/images/uploads/ca519572d01038ee51311f82f9384204.jpg",
@@ -575,70 +575,70 @@ namespace Car2Go.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(1932),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(8258),
                             IsDeleted = false,
                             Name = "Tashkent International Airport"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2836),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9201),
                             IsDeleted = false,
                             Name = "Chilanzar Subway Station"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2875),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9247),
                             IsDeleted = false,
                             Name = "Hilton Hotel"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2890),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9263),
                             IsDeleted = false,
                             Name = "Mega Planet"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2904),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9278),
                             IsDeleted = false,
                             Name = "North Train Station"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2919),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9296),
                             IsDeleted = false,
                             Name = "South Train Station"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2932),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9309),
                             IsDeleted = false,
                             Name = "Bunyodkor Stadium"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2944),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9323),
                             IsDeleted = false,
                             Name = "Oybek Subway Station"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2957),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9336),
                             IsDeleted = false,
                             Name = "Park Amir Temur"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedOn = new DateTime(2022, 4, 15, 13, 36, 54, 650, DateTimeKind.Utc).AddTicks(2971),
+                            CreatedOn = new DateTime(2022, 5, 17, 14, 3, 15, 659, DateTimeKind.Utc).AddTicks(9350),
                             IsDeleted = false,
                             Name = "Buyuk Ipak Yoli Subway Station"
                         });
@@ -683,6 +683,9 @@ namespace Car2Go.Data.Migrations
                     b.Property<int>("ReturnLocationId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ReviewId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -698,7 +701,53 @@ namespace Car2Go.Data.Migrations
 
                     b.HasIndex("ReturnLocationId");
 
+                    b.HasIndex("ReviewId");
+
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Car2Go.Data.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -841,6 +890,25 @@ namespace Car2Go.Data.Migrations
                     b.HasOne("Car2Go.Data.Models.Location", "ReturnLocation")
                         .WithMany()
                         .HasForeignKey("ReturnLocationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Car2Go.Data.Models.Review", "Review")
+                        .WithMany()
+                        .HasForeignKey("ReviewId");
+                });
+
+            modelBuilder.Entity("Car2Go.Data.Models.Review", b =>
+                {
+                    b.HasOne("Car2Go.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Car2Go.Data.Models.Car", "Car")
+                        .WithMany("Reviews")
+                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

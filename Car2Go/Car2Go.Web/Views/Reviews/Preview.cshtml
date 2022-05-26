@@ -1,0 +1,58 @@
+﻿@model Car2Go.Web.ViewModels.Reviews.ReviewPreviewInputModel
+@{ ViewData["Title"] = "Preview"; }
+
+<h1>Hello</h1>
+
+
+<div class="container-fluid col-md-10 border-danger" style="margin-top: 4%">
+
+    <h3><strong>Dear, @User.Identity.Name</strong></h3>
+    <h2><strong>Your view preview:</strong></h2>
+    <hr />
+    <div class="mx-auto">
+        <div class="receipt-id-handler d-flex justify-content-between">
+            <h3>Car Id:</h3>
+            <h3>@Model.CarId</h3>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between">
+            <h4>User Id:</h4>
+            <h4>@Model.ApplicationUserId</h4>
+        </div>
+        <div class="d-flex justify-content-between">
+            <h4>Rating:</h4>
+            <h4>@Model.Rating</h4>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between">
+            <h4>Comment:</h4>
+            <h4>@Model.Comment</h4>
+        </div>
+
+    </div>
+</div>
+
+<center>
+    <div class="d-flex justify-content-around">
+        <form asp-controller="Reviews" asp-action="Create" method="POST">
+            <input type="hidden" value="@Model.CarId" name="CarId" />
+            <input type="hidden" value="@Model.ApplicationUserId" name="ApplicationUserId" />
+            <label asp-for="Rating" class="control-label"></label><br />
+            <select asp-for="Rating" name="cars" id="cars" style="width: 350px">
+                <option value="1" style="text-align-last: center">1</option>
+                <option value="2" style="text-align-last: center">2</option>
+                <option value="3" style="text-align-last: center">3</option>
+                <option value="4" style="text-align-last: center">4</option>
+                <option value="4" style="text-align-last: center">5</option>
+            </select>
+            <br />
+            <span asp-validation-for="Rating" class="alert-success"></span>
+            <br />
+            <label asp-for="Comment" class="control-label"></label>
+            <input asp-for="Comment" class="form-control" />
+            <span asp-validation-for="Comment" class="alert-success"></span>
+            <br />
+            <button type="submit" class="btn btn-success">Confirm</button>
+        </form>
+    </div>
+</center>
