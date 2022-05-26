@@ -1,29 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EAB6FCCB-0285-4203-892D-50405B2A8BFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Web", "Car2Go.Web\Car2Go.Web.csproj", "{155D7E0D-2025-4063-90C6-0268D9465F49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Web", "Car2Go.Web\Car2Go.Web.csproj", "{155D7E0D-2025-4063-90C6-0268D9465F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Common", "Car2Go.Common\Car2Go.Common.csproj", "{60C06228-B0B4-4849-A9D1-110F4445072B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Common", "Car2Go.Common\Car2Go.Common.csproj", "{60C06228-B0B4-4849-A9D1-110F4445072B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{06FA69F1-ECFA-4BA7-AF6E-78D97845E117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Data.Common", "Car2Go.Data.Common\Car2Go.Data.Common.csproj", "{58ED893D-E9B4-4CBF-8E30-573018F0AB59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Data.Common", "Car2Go.Data.Common\Car2Go.Data.Common.csproj", "{58ED893D-E9B4-4CBF-8E30-573018F0AB59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Data.Models", "Car2Go.Data.Models\Car2Go.Data.Models.csproj", "{C15FC138-B98F-4BF1-A00D-4C3FE06CE133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Data.Models", "Car2Go.Data.Models\Car2Go.Data.Models.csproj", "{C15FC138-B98F-4BF1-A00D-4C3FE06CE133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Data", "Car2Go.Data\Car2Go.Data.csproj", "{04B7EF6A-F32E-4E30-99D6-B207DCB8E7A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Data", "Car2Go.Data\Car2Go.Data.csproj", "{04B7EF6A-F32E-4E30-99D6-B207DCB8E7A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{87CFA106-FE7B-46A1-8176-7D5096CA8C6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Services.Data", "Car2Go.Services.Data\Car2Go.Services.Data.csproj", "{5BF386EB-206C-4742-9476-11675CC6A2F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Services.Data", "Car2Go.Services.Data\Car2Go.Services.Data.csproj", "{5BF386EB-206C-4742-9476-11675CC6A2F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Services.Mapping", "Car2Go.Services.Mapping\Car2Go.Services.Mapping.csproj", "{C84BF3C1-5319-4E44-B37E-420AAFD9A2ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Services.Mapping", "Car2Go.Services.Mapping\Car2Go.Services.Mapping.csproj", "{C84BF3C1-5319-4E44-B37E-420AAFD9A2ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Web.ViewModels", "Car2Go.Web.ViewModels\Car2Go.Web.ViewModels.csproj", "{276AB3BB-031D-4690-B981-21CF68BE6528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car2Go.Web.ViewModels", "Car2Go.Web.ViewModels\Car2Go.Web.ViewModels.csproj", "{276AB3BB-031D-4690-B981-21CF68BE6528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car2Go.Services.EmailSender", "Car2Go.Services.EmailSender\Car2Go.Services.EmailSender.csproj", "{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{276AB3BB-031D-4690-B981-21CF68BE6528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{276AB3BB-031D-4690-B981-21CF68BE6528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{276AB3BB-031D-4690-B981-21CF68BE6528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{5BF386EB-206C-4742-9476-11675CC6A2F3} = {87CFA106-FE7B-46A1-8176-7D5096CA8C6A}
 		{C84BF3C1-5319-4E44-B37E-420AAFD9A2ED} = {87CFA106-FE7B-46A1-8176-7D5096CA8C6A}
 		{276AB3BB-031D-4690-B981-21CF68BE6528} = {EAB6FCCB-0285-4203-892D-50405B2A8BFE}
+		{E4968AE0-B932-4C65-BEEA-FBD4E3E42DDC} = {87CFA106-FE7B-46A1-8176-7D5096CA8C6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F108E62A-E575-4B00-A068-4B79F6722D7B}

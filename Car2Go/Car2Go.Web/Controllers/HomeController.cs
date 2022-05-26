@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Car2Go.Data.Models;
 
 namespace Car2Go.Web.Controllers
 {
@@ -14,11 +17,13 @@ namespace Car2Go.Web.Controllers
     {
         private readonly ILocationsService locationsService;
         private readonly IOrdersService ordersService;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public HomeController(ILocationsService locationsService, IOrdersService ordersService)
+        public HomeController(ILocationsService locationsService, IOrdersService ordersService, UserManager<ApplicationUser> userManager)
         {
             this.locationsService = locationsService;
             this.ordersService = ordersService;
+            this.userManager = userManager;
         }
 
         public IActionResult Index(string culture)
@@ -39,6 +44,17 @@ namespace Car2Go.Web.Controllers
         {
             return View(
                 new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            var user = await userManager.FindByEmailAsync(email);
+            if (user == null)
+                return View("Error");
+
+            var result = await userManager.ConfirmEmailAsync(user, token);
+            return View(result.Succeeded ? nameof(ConfirmEmail) : "Error");
         }
     }
 }
