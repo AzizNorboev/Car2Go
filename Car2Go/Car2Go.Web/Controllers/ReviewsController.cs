@@ -56,9 +56,10 @@ namespace Car2Go.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ReviewInputModel inputModel)
         {
+
             if (!this.ModelState.IsValid)
             {
-                return this.RedirectToAction("Index", "Home");
+                return View("Error");
             }
 
             var result = await reviewsService.CreateReview(inputModel.CarId, inputModel.ApplicationUserId, inputModel.Rating, inputModel.Comment);

@@ -14,7 +14,7 @@ namespace Car2Go.Web.ViewModels.Reviews
         public string ApplicationUserId { get; set; }
 
         [Required]
-        [Range(1, 5, ErrorMessage = "Please input between 1 and 5")]
+        [Range(1, 5, ErrorMessage = "Choose number between 1 and 5")]
         public int Rating { get; set; }
 
         [Required(ErrorMessage = "Please also leave a comment")]
