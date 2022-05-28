@@ -57,6 +57,18 @@
           "lib/netstandard2.0/MailKit.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
         "type": "package",
         "compile": {
@@ -3511,6 +3523,20 @@
         "lib/xamarinios/MailKit.xml",
         "mailkit.2.0.1.nupkg.sha512",
         "mailkit.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.0": {
+      "sha512": "OIqXLOQcD8VHrvf6efO/cZhYqV4ZojUd0EnfR9GEBo6ClDaxPeat1+6o4jZo3CPwjuzFN97ESuVp4scNQc893A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
@@ -10606,6 +10632,7 @@
       "Car2Go.Services.Data >= 1.0.0",
       "Car2Go.Services.EmailSender >= 1.0.0",
       "Car2Go.Web.ViewModels >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.Google >= 3.1.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.9",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.9",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.9",
@@ -10676,6 +10703,10 @@
           "BuildBundlerMinifier": {
             "target": "Package",
             "version": "[3.2.449, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",

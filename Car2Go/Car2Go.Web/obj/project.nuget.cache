@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pchGXoXDtj0P5lWKe5eeL/nzGYciFvfA9oeYfX4A8p/N43o06UgCZcoSJAAkukO38ipm9j6YstvRpuHeJ5KYGQ==",
+  "dgSpecHash": "r7GQ5+3/LCn3AM2F9a3ENanHQxBe/zuPVtmyREj7j4qN0BoJdTudna6fysZaKYa/SjsIWlmjvI1ZB4SCC4MyDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Web\\Car2Go.Web.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\mailkit\\2.0.1\\mailkit.2.0.1.nupkg.sha512",
+    "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.0\\microsoft.aspnetcore.authentication.google.3.1.0.nupkg.sha512",
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",
     "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.9.nupkg.sha512",

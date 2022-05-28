@@ -37,6 +37,7 @@
           "Car2Go.Services.Data": "1.0.0",
           "Car2Go.Services.EmailSender": "1.0.0",
           "Car2Go.Web.ViewModels": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.Google": "3.1.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.UI": "3.1.9",
@@ -370,6 +371,17 @@
         },
         "compile": {
           "lib/netstandard2.0/MailKit.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.100.19.56601"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
@@ -4548,6 +4560,13 @@
       "sha512": "sha512-eRzHd5EN+ST3hGUED4QH44nINxnALQbFozPDVlZODydIWgYO19+m6/txvbV69qF4cpjXwlxO7ivpIcB+/97X2A==",
       "path": "mailkit/2.0.1",
       "hashPath": "mailkit.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OIqXLOQcD8VHrvf6efO/cZhYqV4ZojUd0EnfR9GEBo6ClDaxPeat1+6o4jZo3CPwjuzFN97ESuVp4scNQc893A==",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.0",
+      "hashPath": "microsoft.aspnetcore.authentication.google.3.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
       "type": "package",

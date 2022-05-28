@@ -24,6 +24,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Car2Go.Services.EmailSender;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 
 namespace Car2Go.Web
 {
@@ -76,6 +77,15 @@ namespace Car2Go.Web
             .GetSection("EmailConfiguration")
             .Get<EmailConfiguration>();
             services.AddSingleton(emailConfig);
+
+            services.AddAuthentication()
+                 .AddGoogle("google", opt =>
+                 {
+                     var googleAuth = configuration.GetSection("Authentication:Google");
+                     opt.ClientId = googleAuth["ClientId"];
+                     opt.ClientSecret = googleAuth["ClientSecret"];
+                     opt.SignInScheme = IdentityConstants.ExternalScheme;
+                 });
 
 
             services.AddControllersWithViews(
