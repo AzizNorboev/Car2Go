@@ -339,6 +339,70 @@
         }
       }
     },
+    "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\Car2Go.Services.EmailSender.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\Car2Go.Services.EmailSender.csproj",
+        "projectName": "Car2Go.Services.EmailSender",
+        "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\Car2Go.Services.EmailSender.csproj",
+        "packagesPath": "C:\\Users\\Aziz_Norboev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Aziz_Norboev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.Mapping\\Car2Go.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -496,6 +560,9 @@
               "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.Data\\Car2Go.Services.Data.csproj": {
                 "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.Data\\Car2Go.Services.Data.csproj"
               },
+              "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\Car2Go.Services.EmailSender.csproj": {
+                "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Services.EmailSender\\Car2Go.Services.EmailSender.csproj"
+              },
               "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Web.ViewModels\\Car2Go.Web.ViewModels.csproj": {
                 "projectPath": "C:\\Users\\Aziz_Norboev\\Documents\\GitHub\\Car2Go\\Car2Go\\Car2Go.Web.ViewModels\\Car2Go.Web.ViewModels.csproj"
               }
@@ -512,9 +579,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "BuildBundlerMinifier": {
               "target": "Package",
               "version": "[3.2.449, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",

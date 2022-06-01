@@ -22,6 +22,9 @@ using System.Globalization;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
+using Car2Go.Services.EmailSender;
+using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 
 namespace Car2Go.Web
 {
@@ -38,6 +41,7 @@ namespace Car2Go.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
@@ -69,6 +73,21 @@ namespace Car2Go.Web
                     opt.SupportedUICultures = supportedCultures;
                 });
 
+            var emailConfig = configuration
+            .GetSection("EmailConfiguration")
+            .Get<EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+
+            services.AddAuthentication()
+                 .AddGoogle("google", opt =>
+                 {
+                     var googleAuth = configuration.GetSection("Authentication:Google");
+                     opt.ClientId = googleAuth["ClientId"];
+                     opt.ClientSecret = googleAuth["ClientSecret"];
+                     opt.SignInScheme = IdentityConstants.ExternalScheme;
+                 });
+
+
             services.AddControllersWithViews(
                 options =>
                 {
@@ -78,11 +97,14 @@ namespace Car2Go.Web
 
             services.AddHttpContextAccessor();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddSingleton(this.configuration);
 
             // Data repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped<IEmailSender, EmailSender>();
 
             services.AddTransient<ILocationsService, LocationsService>();
             services.AddTransient<ICarsService, CarsService>();

@@ -1,0 +1,10 @@
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\bin\Debug\netstandard2.1\Car2Go.Services.EmailSender.deps.json
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\bin\Debug\netstandard2.1\Car2Go.Services.EmailSender.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\bin\Debug\netstandard2.1\Car2Go.Services.EmailSender.pdb
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.csproj.AssemblyReference.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.AssemblyInfoInputs.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.AssemblyInfo.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.csproj.CoreCompileInputs.cache
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.dll
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.EmailSender\obj\Debug\netstandard2.1\Car2Go.Services.EmailSender.pdb

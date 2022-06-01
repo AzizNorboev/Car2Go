@@ -7,4 +7,3 @@ C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\net
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.csproj.CoreCompileInputs.cache
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.dll
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.pdb
-C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Common\obj\Debug\netstandard2.1\Car2Go.Common.csproj.AssemblyReference.cache
