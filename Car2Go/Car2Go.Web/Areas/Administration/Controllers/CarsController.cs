@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Car2Go.Data;
 using Car2Go.Data.Common.Repositories;
 using Car2Go.Data.Models;
+using System.Security.Claims;
+using Car2Go.Services.Data;
 
 namespace Car2Go.Web.Areas.Administration.Controllers
 {
@@ -15,10 +17,12 @@ namespace Car2Go.Web.Areas.Administration.Controllers
     public class CarsController : AdministrationController
     {
         private readonly IDeletableEntityRepository<Car> dataRepository;
+        private readonly IDealerService delearService;
 
-        public CarsController(IDeletableEntityRepository<Car> dataRepository)
+        public CarsController(IDeletableEntityRepository<Car> dataRepository, IDealerService delearService)
         {
             this.dataRepository = dataRepository;
+            this.delearService = delearService;
         }
 
         // GET: Administration/Cars
@@ -56,8 +60,10 @@ namespace Car2Go.Web.Areas.Administration.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
+        public async Task<IActionResult> Create([Bind("InUse,Model,Description,Year,Speed,Image,GearType,PricePerDay, DealerId, IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Car car)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            car.DealerId = delearService.IdByUser(userId);
             if (this.ModelState.IsValid)
             {
                 await this.dataRepository.AddAsync(car);

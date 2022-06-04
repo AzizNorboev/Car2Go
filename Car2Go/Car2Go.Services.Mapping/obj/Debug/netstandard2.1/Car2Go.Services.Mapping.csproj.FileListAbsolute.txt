@@ -7,4 +7,3 @@ C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.Mapping\obj
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.Mapping\obj\Debug\netstandard2.1\Car2Go.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.Mapping\obj\Debug\netstandard2.1\Car2Go.Services.Mapping.dll
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.Mapping\obj\Debug\netstandard2.1\Car2Go.Services.Mapping.pdb
-C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Services.Mapping\obj\Debug\netstandard2.1\Car2Go.Services.Mapping.csproj.AssemblyReference.cache

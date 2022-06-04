@@ -121,5 +121,25 @@ namespace Car2Go.Services.Data
 
             return cars;
         }
+
+        public IEnumerable<Car> ByUser(string userId)
+        {
+            var cars = this.carsRepository.AllAsNoTracking()
+                 .OrderBy(x => x.Id)
+                 .Select(x => new Car
+                 {
+                     Id = x.Id,
+                     Description = x.Description,
+                     Model = x.Model,
+                     PricePerDay = x.PricePerDay,
+                     Image = x.Image,
+                     Year = x.Year,
+                     GearType = x.GearType,
+                     Speed = x.Speed,
+                     Dealer = x.Dealer
+                 }).ToList();
+
+            return cars.Where(c => c.Dealer.UserId == userId);
+        }
     }
 }

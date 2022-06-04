@@ -33,6 +33,8 @@ namespace Car2Go.Data
 
         public DbSet<CarRentDays> CarRentDays { get; set; }
 
+        public DbSet<Dealer> Dealers { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -57,7 +59,11 @@ namespace Car2Go.Data
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 
-            
+            builder.Entity<Dealer>()
+                 .HasOne<ApplicationUser>()
+                 .WithOne()
+                 .HasForeignKey<Dealer>(d => d.UserId)
+                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Car>().
                HasMany(x => x.RentDays).
@@ -89,7 +95,6 @@ namespace Car2Go.Data
             user.PasswordHash = hash;
 
             builder.Entity<ApplicationUser>().HasData(user);
-
 
             builder.Entity<Location>().HasData(new Location { Id = 1, Name = "Tashkent International Airport" });
             builder.Entity<Location>().HasData(new Location { Id = 2, Name = "Chilanzar Subway Station" });

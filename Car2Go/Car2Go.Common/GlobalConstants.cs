@@ -9,5 +9,7 @@ namespace Car2Go.Common
         public const string SystemName = "Car2Go";
 
         public const string AdministratorRoleName = "Administrator";
+
+        public const string GlobalMessageKey = "GlobalMessage";
     }
 }

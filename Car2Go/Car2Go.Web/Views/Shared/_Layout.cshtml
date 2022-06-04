@@ -32,6 +32,9 @@
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="MyOrders"><b>@localizer["My Orders"]</b></a>
+                            </li>                           
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="Mine"><b>@localizer["My Cars"]</b></a>
                             </li>
                         }
                         @if (User.IsInRole(GlobalConstants.AdministratorRoleName))
@@ -43,6 +46,10 @@
                                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Orders" asp-action="Index"><b>@localizer["Orders"] Admin</b></a>
                             </li>
                         }
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Dealers" asp-action="Become"><b>@localizer["Become a Dealer"]</b></a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -535,3 +535,8 @@ C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\bin\Debug\netcor
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ExternalAuthentication.cshtml.g.cs
 C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\ExternalLogin.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Mine.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Create.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Delete.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Edit.cshtml.g.cs
+C:\Users\Aziz_Norboev\Documents\GitHub\Car2Go\Car2Go\Car2Go.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealers\Become.cshtml.g.cs

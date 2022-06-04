@@ -17,5 +17,7 @@ namespace Car2Go.Services.Data
         IEnumerable<ListCarInputModel> GetAvailableCars(DateTime start, DateTime end, string location);
 
         IEnumerable<CarDetailInputModel> GetCarModelById(int id);
+
+        IEnumerable<Car> ByUser(string userId);
     }
 }

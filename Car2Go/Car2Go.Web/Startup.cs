@@ -111,6 +111,7 @@ namespace Car2Go.Web
             services.AddTransient<IOrdersService, OrdersService>();
             services.AddTransient<IUsersService, UsersService>();
             services.AddTransient<IReviewsService, ReviewsService>();
+            services.AddTransient<IDealerService, DealerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
